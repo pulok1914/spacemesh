@@ -1,0 +1,127 @@
+<section  class="hero">
+    <div class="hero__main-content">
+        <h1 class="hero__heading">{{.data.heading | markdownify}} </h1>
+        <div class="hero__primary-text">
+            {{.data.text | safeHTML}}
+        </div>
+
+        <div class="hero__quote">
+            {{.data.quote | markdownify}}
+        </div>
+        <div class="hero__buttons">
+            <a href="{{.data.first_btn.link}}" class="hero__button hero__button--event">{{.data.first_btn.label | markdownify}}
+                <div class="hero__event-icon-wrapper hero__event-icon-wrapper--event">
+                    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9321 23.2174L20.4502 11.8824L10.9321 0.547407" stroke="#3AFFA7"/>
+                        <path d="M0.675781 11.8824L20.1798 11.8824" stroke="#3AFFA7"/>
+                        </svg>
+                </div>
+            </a>
+            <a href="{{.data.second_btn.link}}" class="hero__button hero__button--updates">{{.data.second_btn.label | markdownify}}
+                <div class="hero__event-icon-wrapper">
+                    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.9321 23.2174L20.4502 11.8824L10.9321 0.547407" stroke="#ffffff"/>
+                        <path d="M0.675781 11.8824L20.1798 11.8824" stroke="#ffffff"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="hero__image-wrapper">
+            
+            <video onloadeddata="playVideo()" class="hero__image-wrapper-video" playsinline muted loop>
+                <source
+                data-scr="{{.data.video_details.url}}" src="{{.data.video_details.url}}" type="video/mp4">
+                    <track label="English" kind="subtitles" src="{{.data.video_details.subtitle}}" default>      
+            </video>
+            
+            <img src="{{.data.image}}"
+            class="hero__image-wrapper-image"
+            alt="{{.Title}}"
+            data-name="{{.data.video_details.name}}"
+            data-video="{{.data.video_details.url}}"
+            data-id="{{.data.video_details.id}}"
+            data-subtitle="{{.data.video_details.subtitle}}"
+            data-width="590"
+            data-height="528"
+            />
+                  
+        </div>
+    </div>
+    <div class="hero__bottom-cards">
+        <div class="hero__card-one" data-block="events">
+            <div class="hero__card-one-left">
+                <div class="hero__card-one-sub-heading">{{.data.cardOne.left_content.sub_heading | markdownify}}</div>
+                <h2 class="hero__card-one-heading">{{.data.cardOne.left_content.heading | markdownify}}</h2>
+                <div class="hero__card-one-text">
+                    {{.data.cardOne.left_content.text | markdownify}}
+                </div>
+            </div>
+            <div class="hero__card-one-middle">
+                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.60055 6.51642C8.60055 7.57242 7.86455 8.50042 6.71255 8.50042C5.86455 8.50042 5.38455 7.90842 5.38455 7.10842C5.38455 6.00442 6.10455 5.01242 7.20855 5.01242C8.05655 5.01242 8.60055 5.57242 8.60055 6.51642ZM9.04855 4.48442C8.56855 3.78042 7.86455 3.47642 7.09655 3.47642C5.16055 3.47642 3.78455 5.38042 3.78455 7.33242C3.78455 8.94842 4.84055 10.0364 6.15255 10.0364C6.90455 10.0364 7.56055 9.71642 7.96055 9.17242H7.99255C8.02455 9.74842 8.42455 10.0364 9.11255 10.0364C9.94455 10.0364 13.1446 9.02842 13.1446 5.50842C13.1446 2.48442 10.2966 0.548418 7.28855 0.548418C3.54455 0.548418 0.984551 3.26842 0.984551 6.62842C0.984551 9.98842 3.76855 12.7084 7.22455 12.7084C9.49655 12.7084 11.2566 11.8124 12.4086 10.1964H10.8726C10.0246 10.9004 8.85655 11.3644 7.57655 11.3644C4.69655 11.3644 2.68055 9.57242 2.68055 6.64442C2.68055 3.95642 4.47255 1.98842 7.28855 1.98842C9.88055 1.98842 11.7046 3.34842 11.7046 5.95642C11.7046 7.65242 10.7126 8.69242 10.0726 8.69242C9.80055 8.69242 9.65655 8.50042 9.65655 8.29242C9.65655 8.05242 9.70455 7.78042 9.78455 7.41242L10.6166 3.66842H9.24055L9.04855 4.48442Z" fill="black"/>
+                </svg>
+                    
+            </div>
+            <div class="hero__card-one-right">
+                <h2 class="hero__card-one-heading">{{.data.cardOne.right_content.heading | markdownify}} </h2>
+                <div class="hero__card-one-text hero__card-one-text-right">
+                    {{.data.cardOne.right_content.text | markdownify}}
+                </div>
+            </div>
+            <a href="{{.data.cardOne.bottom_button.link }}" class="hero__card-one-button">{{.data.cardOne.bottom_button.label | markdownify}}
+                <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.9321 23.2174L20.4502 11.8824L10.9321 0.547407" stroke="#000000"/>
+                    <path d="M0.675781 11.8824L20.1798 11.8824" stroke="#000000"/>
+                </svg>
+            </a>
+        </div>
+        <!-- <section class="hero__card-two" data-block="events">
+            <img src="/images/demo-image.webp" alt="" class="hero__card-two-image">
+            Content is here
+    </section> -->
+    <div class="hero__card-three hero__card-three--black" data-block="events">
+        <div class="hero__card-three-text">
+            {{.data.cardTwo.heading | markdownify}}
+        </div>
+        <a href="{{.data.cardTwo.bottom_button.link}}"  class="hero__card-three-button">{{.data.cardTwo.bottom_button.label | markdownify}}
+            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.9321 23.2174L20.4502 11.8824L10.9321 0.547407" stroke="#ffffff"/>
+                <path d="M0.675781 11.8824L20.1798 11.8824" stroke="#ffffff"/>
+            </svg>
+        </a>
+    </div>
+        <div class="hero__card-three" data-block="events">
+            <div class="hero__card-three-text">
+                {{.data.cardThree.heading | markdownify}}
+            </div>
+            <a href="{{.data.cardThree.bottom_button.link }}" class="hero__card-three-button">{{.data.cardThree.bottom_button.label | markdownify}}
+                <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.9321 23.2174L20.4502 11.8824L10.9321 0.547407" stroke="#ffffff"/>
+                    <path d="M0.675781 11.8824L20.1798 11.8824" stroke="#ffffff"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+
+// window.onload = ()=>{
+//     document.querySelector('.hero__card-two').style.transfrom = 'translate(0)';
+// }
+
+function stopDrag(){
+    console.log('draging')
+}
+function playVideo(){
+    const videoElement = document.querySelector('.hero__image-wrapper-video');
+    const image = document.querySelector('.hero__image-wrapper-image');
+    if(videoElement.readyState >= 3){
+
+        image.style.display = "none";
+        videoElement.style.display ="block";
+        videoElement.play();
+    }
+}
+
+</script>

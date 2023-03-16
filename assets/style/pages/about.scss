@@ -1,0 +1,25 @@
+main .about {
+	.section.hero {
+		.position--a {
+			grid-area: 1/1 / span 1 / span 4;
+		}
+	}
+
+	.section {
+		.position--a,
+		.block[data-block='communityLarge'] {
+			grid-area: 1 / 1 / span 1 / span 4;
+		}
+	}
+
+	.section.team {
+		.position--a,
+		.block[data-block='subtitle'] {
+			grid-area: 1 / 1 / span 1 / span 2;
+		}
+		.position--b,
+		.block[data-block='team'] {
+			grid-area: 2 / 1 / span 1 / span 4;
+		}
+	}
+}

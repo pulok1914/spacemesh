@@ -1,0 +1,15 @@
+[data-behind='rewardCoin'] {
+	// background-color: red;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		display: block;
+	}
+
+	video {
+		pointer-events: none;
+	}
+}

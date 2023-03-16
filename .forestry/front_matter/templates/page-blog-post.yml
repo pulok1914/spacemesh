@@ -1,0 +1,125 @@
+---
+label: 'Posts: Blog'
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+  default: now
+- type: text
+  name: author
+  label: Author
+  config:
+    required: true
+- type: list
+  name: categories
+  label: Categories
+  config:
+    use_select: true
+    source:
+      type: documents
+      section: blog-list-674a0062-c706-434a-8a5d-782013abc9df
+      file: content/blog/_index.md
+      path: categories_list
+- type: file
+  name: cover
+  label: Cover
+- type: list
+  name: tags
+  label: Tags
+  config:
+    use_select: false
+- name: aliases
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Aliases
+  description: Add multiple URL <a href="https://gohugo.io/content-management/urls/#example-aliases"
+    title="" target="_blank" rel="noopener noreferrer">aliases</a> for this blog post.
+pages:
+- content/blog/2019-spacemesh-project-summary.md
+- content/blog/2020-spacemesh-update.md
+- content/blog/2021-end-of-year-update.md
+- content/blog/a-new-human-chain.md
+- content/blog/adam-smith-was-wrong.md
+- content/blog/agape-hand-raffle.md
+- content/blog/all-the-world-s-a-game-are-you-ready-to-play.md
+- content/blog/ama-summary-07-11-21.md
+- content/blog/bismarck-with-an-iphone-the-future-of-the-age-of-reason.md
+- content/blog/blockmesh-os-pioneer-spacemesh-raises-15m-in-series-a-funding-led-by-polychain.md
+- content/blog/byzantine-agreement-algorithms-and-dolev-strong.md
+- content/blog/community-suggestions-1.md
+- content/blog/community-suggestions-may-2022.md
+- content/blog/core-devs-community-sync.md
+- content/blog/deep-dive-with-prof.tal-moran.md
+- content/blog/don-t-talk-about-it-prove-it.md
+- content/blog/end-of-same_oppurtuinity-cause.md
+- content/blog/fight-for-freedom-of-expression.md
+- content/blog/first-drop-challenge.md
+- content/blog/how-to-smesh-from-your-laptop.md
+- content/blog/it-shouldn-t-take-years-for-smart-people-to-understand-cryptocurrencies.md
+- content/blog/join-us.md
+- content/blog/july-2018-community-update.md
+- content/blog/just-use-an-existing-p2p-library-they-said.md
+- content/blog/markdown-for-guide.md
+- content/blog/maybe-the-world-isn-t-ending.md
+- content/blog/money-is-all-a-narrative.md
+- content/blog/our-universe-has-always-been-decentralized.md
+- content/blog/project-brief.md
+- content/blog/proof-of-sequential-work.md
+- content/blog/proof-of-stake-vs-proof-of-space-time.md
+- content/blog/proofs-of-space-time-and-decentralization.md
+- content/blog/proofs-of-space-time-asics.md
+- content/blog/race-free-consensus-based-on-proofs-of-space-time.md
+- content/blog/relearning-how-to-play-the-language-and-money-games.md
+- content/blog/smapp-0.2-a-sneak-peek.md
+- content/blog/smapp-0.2-guide-challenge.md
+- content/blog/social-media-vs-social-reality.md
+- content/blog/spacemesh-community-nft.md
+- content/blog/spacemesh-crypto-consciousness-and-community.md
+- content/blog/spacemesh-economics-intro.md
+- content/blog/spacemesh-eligibility.md
+- content/blog/spacemesh-for-dummies.md
+- content/blog/spacemesh-manifesto.md
+- content/blog/spacemesh-press-release-1.md
+- content/blog/spacemesh-protocol-v1.0.md
+- content/blog/spacemesh-social-causes-program.md
+- content/blog/spacemesh-virtual-machine-svm.md
+- content/blog/spacemesh-vision-and-core-values.md
+- content/blog/spacemesh-white-paper-1.md
+- content/blog/taking-back-our-privacy.md
+- content/blog/the-future-and-morality-can-t-be-quantified-in-a-lab.md
+- content/blog/the-governed-governing-the-governors.md
+- content/blog/the-race-to-race-free-or-why-we-chose-mesh-over-chain.md
+- content/blog/the-rise-and-fall-of-technocracy.md
+- content/blog/the-spacemesh-consensus-protocol.md
+- content/blog/tweedledee-mega-postmortem.md
+- content/blog/tweedledee-testnet-netid-113-incident-postmortem.md
+- content/blog/tweedledee-testnet-netid-116-incident-postmortem.md
+- content/blog/tweedledee-testnet-netid-118-incident-postmortem.md
+- content/blog/tweedledee-testnet-netid-119-incident-postmortem.md
+- content/blog/tweedledee-testnet-netid-124-incident-postmortem.md
+- content/blog/video-introduction-to-the-spacemesh-protocol.md
+- content/blog/we-all-deserve-the-same-opportunities.md
+- content/blog/why-work-at-spacemesh.md
+- content/blog/winning-together-fight-online-censorship.md
+- content/blog/winning-together-memes-over-cookies.md
+- content/blog/winning-together-nft-collage.md
+- content/blog/winning-together-pro-tips.md
+- content/blog/winning_together-awareness-spotlight.md
+- content/blog/winning_together-eyes-wide-shut.md
+- content/blog/winning_together-raise-the-flag.md
+- content/blog/winning_together-red-pill.md
+- content/blog/winning_together-vote-for-a-voice.md
+- content/blog/winning_together-why-spacemesh.md
+- content/blog/you-and-i-can-change-the-world.md

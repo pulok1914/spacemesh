@@ -1,0 +1,61 @@
+{{ $type := "testnet" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    <p class="small-text updated">Updated <span>0</span> seconds ago</p>
+</section>
+
+<section class="block__bottom">
+    <div class="status small-text">
+        <div class="status-img">
+            <img data-src="/images/offline-oval.png" class="lazyload offline" alt="offline" width="110" height="110"/>
+            <img data-src="/images/online-oval.png" class="lazyload online" alt="online" width="110" height="110"/>
+        </div>
+        <span>Offline</span>
+    </div>
+    <div class="grid" data-endpoint="{{ .data.endpoint }}">
+        <article class="stat active">
+            <div class="header">
+               <span class="label small-text">ACTIVE SMESHERS</span>
+               <img class="icon" src="/images/icons/testnet-active.svg" alt="active">
+            </div>
+            <div class="metric">0</div>
+        </article>
+        <article class="stat accounts">
+            <div class="header">
+               <span class="label small-text">Accounts</span>
+               <img class="icon" src="/images/icons/testnet-accounts.svg" alt="accounts">
+            </div>
+            <div class="metric">0</div>
+        </article>
+        <article class="stat transactions">
+            <div class="header">
+               <span class="label small-text">TRANSACTIONS</span>
+               <img class="icon" src="/images/icons/testnet-transactions.svg" alt="transactions">
+            </div>
+            <div class="metric">0</div>
+        </article>
+        <article class="stat layer">
+            <div class="header">
+               <span class="label small-text">LAYER / EPOCH</span>
+               <img class="icon" src="/images/icons/testnet-layer.svg" alt="layer">
+            </div>
+            <div class="metric">0</div>
+        </article>
+        <article class="stat rewards">
+            <div class="header">
+               <span class="label small-text">Total Rewards (SMH)</span>
+               <img class="icon" src="/images/icons/testnet-rewards.svg" alt="rewards">
+            </div>
+            <div class="metric">0</div>
+        </article>
+        <article class="stat age">
+            <div class="header">
+               <span class="label small-text">Age</span>
+               <img class="icon" src="/images/icons/testnet-age.svg" alt="age">
+            </div>
+            <div class="metric">0</div>
+        </article>
+    </div>
+</section>
+{{ partial "blocks/_footer.html" . }}

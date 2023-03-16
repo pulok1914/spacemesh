@@ -1,0 +1,10 @@
+{{ $slugs := dict "home" "/" }}
+{{ range .Site.Menus.primary }}
+    {{ $slugs = merge $slugs (dict .Identifier .URL)}}
+{{ end }}
+{{ $params := dict "slugs" $slugs }}
+{{ $defines := dict "process.env.NODE_ENV" "\"development\"" "process.env.BaseURL" (printf `"%s"` .Site.BaseURL) }}
+{{ $options := dict "target" "es2018" "defines" $defines "params" $params "minify" true }}
+
+{{ $js := resources.Get "js/app.ts" | js.Build $options | fingerprint }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>

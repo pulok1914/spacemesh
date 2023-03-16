@@ -1,0 +1,17 @@
+---
+label: 'Block: FAQ'
+hide_body: true
+display_field: intro
+fields:
+- name: id
+  type: text
+  config:
+    required: false
+  label: Id
+  description: This is used to link directly to this element. This should not be changed.
+  hidden: false
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro

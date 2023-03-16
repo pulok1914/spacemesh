@@ -1,0 +1,57 @@
+---
+label: 'Behind: Generic'
+hide_body: true
+fields:
+- name: type
+  type: text
+  default: generic
+  config:
+    required: false
+  label: Type
+  hidden: true
+  description: Determines which template to use for rendering
+- name: enabled
+  type: boolean
+  label: Enabled
+  description: Toggle this to show/hide the coin from the website.
+  hidden: false
+- name: position
+  type: select
+  default: A
+  config:
+    required: true
+    options:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - F
+    - G
+    - H
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Position
+  description: Choose between a list of predefined areas. Blocks are named A, B, C
+    etc. in the order in which they are listed on the page. Keep in mind not all pages
+    have 8 blocks to hide things behind.
+- name: link
+  type: text
+  config:
+    required: false
+  label: Link
+  description: External link to open when clicking the coin
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: text
+  type: text
+  config:
+    required: false
+  label: Text
+  description: Text to show under the image

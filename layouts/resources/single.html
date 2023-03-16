@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+    {{ with .Params }}
+        {{ range .sections }}
+            <h1>{{ .title }}</h1>
+            {{ range .entries }}
+            <article>
+                <p>Q: {{ .question }}</p>
+                <p>A: {{ .answer }}</p>
+                <br>
+            </article>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+
+{{ end }}

@@ -1,0 +1,31 @@
+{{ $type := "updatePost" }}
+{{ $params := .ctx.Params }}
+{{ $id := urlize (printf "%s-%d" .ctx.Title $params.count) }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type "id" $id)) }}
+
+<section class="grid header" id="{{ $id }}">
+    <p class="count">#{{ $params.count }}</p>
+    <p class="date">{{ .ctx.Date.Format "01.02.2006" }}</p>
+    <p class="title">{{ .ctx.Title }}</p>
+</section>
+
+<section class="body">
+    <div class="grid highlights">
+        <div class="right">
+            {{ $params.highlights | safeHTML }}
+        </div>
+        <div class="split"></div>
+    </div>
+
+    <div class="updates">
+        {{ range $params.updates }}
+            <div class="grid update">
+                <h3 class="left">{{ .header }}</h3>
+                <div class="right content-body">{{ .body | safeHTML }}</div>
+                <div class="split"></div>
+            </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "blocks/_footer.html" . }}

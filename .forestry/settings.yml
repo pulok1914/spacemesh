@@ -1,0 +1,127 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: heading
+  label: Pages
+- type: document
+  path: content/_index.md
+  label: Homepage
+- type: document
+  path: content/about/index.md
+  label: About
+- type: document
+  path: content/blog/_index.md
+  label: Blog
+- type: document
+  path: content/careers/_index.md
+  label: Join Us
+- type: document
+  path: content/resources/_index.md
+  label: Resources
+- type: document
+  path: content/start/index.md
+  label: Get Started
+- type: document
+  path: content/updates/_index.md
+  label: Weekly Updates
+- type: document
+  path: content/terms.md
+  label: Terms
+- type: document
+  path: content/privacy.md
+  label: Privacy
+- type: document
+  path: content/wt/index.md
+  label: Winning Together
+- type: directory
+  path: content
+  label: Other Pages
+  create: all
+  match: "*.md"
+  exclude: _index.md
+  templates:
+  - page-master
+  - page-basic
+- type: directory
+  path: content/events
+  label: Events
+  create: all
+  match: "**/*"
+- type: heading
+  label: Posts
+- type: directory
+  path: content/blog
+  label: Blog Posts
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - page-blog-post
+- type: directory
+  path: content/resources/faq
+  label: FAQ Posts
+  create: all
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - page-faq-post
+- type: directory
+  path: content/creators
+  label: Creators
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - posts-creator
+- type: directory
+  path: content/careers
+  label: Careers
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - posts-job-posting
+- type: directory
+  path: content/resources/glossary
+  label: Glossary (Arley)
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - page-glossary-term
+- type: directory
+  path: content/updates
+  label: Updates
+  create: documents
+  match: "**/*"
+  exclude: _index.md
+  templates:
+  - posts-update
+- type: heading
+  label: Other
+- type: directory
+  path: data
+  label: Global
+  create: all
+  match: "**/*"
+upload_dir: static/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: 
+file_template: ":filename:_:year:-:month:-:day:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.81.0
+  - NPM_TOKEN=f1974dda-892b-4312-b5f7-664a4c813c81
+  preview_output_directory: public
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/hugo:node12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
+    -d public
+version: 0.81.0

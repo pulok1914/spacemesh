@@ -1,0 +1,16 @@
+---
+label: 'Page: Resources'
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-hero-resources
+  - section-faq-resources
+  - section-others-resources
+pages:
+- content/resources/_index.md

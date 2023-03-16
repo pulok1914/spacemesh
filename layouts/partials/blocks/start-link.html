@@ -1,0 +1,26 @@
+{{ $type := "startLink" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<a href="{{ .data.link }}" target="_blank" rel="noopener noreferrer" class="link{{ if .data.disabled }} disabled{{ end }}">
+    <section class="block__top">
+        {{ if eq .icon "requirements" }}
+        {{/*  <img class="icon" src="/images/icons/start-requirements.svg">  */}}
+        {{ partial "svg/start/start-requirements.svg"}}
+        {{ end }}
+        {{ if eq .icon "hardware" }}
+        {{/*  <img class="icon" src="/images/icons/start-hardware.svg">  */}}
+        {{ partial "svg/start/start-hardware.svg"}}
+        {{ end }}
+        {{ if eq .icon "apply" }}
+        {{/*  <img class="icon" src="/images/icons/start-apply.svg">  */}}
+        {{ partial "svg/start/start-apply.svg"}}
+        {{ end }}
+
+        {{/*  <img class="arrow" src="/images/arrows/arrow-white.svg" alt="">  */}}
+        {{ partial "svg/arrow.svg"}}
+    </section>
+
+    <section class="block__bottom">
+        <h3>{{ .data.headline | safeHTML }}</h2>
+    </section>
+</a>
+{{ partial "blocks/_footer.html" . }}

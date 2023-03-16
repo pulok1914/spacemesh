@@ -1,0 +1,29 @@
+---
+label: 'Section: Hero Updates'
+hide_body: true
+fields:
+- name: intro
+  type: field_group
+  config: {}
+  fields:
+  - name: cover
+    type: include
+    config: {}
+    template: block-cover
+    label: Cover
+  label: Intro
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: top
+    type: blocks
+    label: Top
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 
+      max: 
+    description: This section only support the <strong>A</strong> position
+  label: Hidden

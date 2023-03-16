@@ -1,0 +1,46 @@
+{{ define "description" }}
+<meta property="og:description" content="{{ .Description | default .Summary }}">
+<meta name="twitter:description" content="{{ .Description | default .Summary }}">
+{{ end }}
+{{ define "cover" }}
+  <meta property="og:image" content="{{ .Params.cover | default site.Params.titleImage }}?nf_resize=smartcrop&w=1200&h=627">
+  <meta name="twitter:image" content="{{ .Params.cover | default site.Params.titleImage }}">
+  <meta name="twitter:image:alt" content="overwrite {{ .Title | default site.Title }}">
+{{ end }}
+{{ define "main" }}
+<main class="main blog-post">
+    <nav class="top">
+        <a href="/blog/" alt="Go back to blog" class="back">{{ partial "svg/arrow.svg" }}</a>
+        <div class="date">
+            {{.Date.Format "01.02.2006"}}
+            {{ if .Params.author }}<span class="author">| {{ .Params.author }}</span>{{ end }}
+        </div>
+    </nav>
+
+    <section class="section post pd-btm">
+        <header>
+            <ul class="categories">
+                {{ range .Params.categories }}
+                <li class="pill"><a href="{{printf "/blog/categories/%s" . | urlize}}">{{ . }}</a></li>
+                {{ end }}
+            </ul>
+            <h1 class="title">{{ .Title }}</h1>
+            <div class="cover-wrapper">
+                <img src="{{ .Params.cover }}" class="cover" alt="Cover image for {{ .Title }}" />
+            </div>
+        </header>
+        <section class="post-body">
+            {{ .Content }}
+        </section>
+    </section>
+
+    <section class="section related">
+        {{ $related := .Site.RegularPages.Related . | first 3 }}
+        {{ with $related }}
+            {{ range . }}
+                {{ partial "blocks/blog-card.html" (dict "ctx" .) }}
+            {{ end }}
+        {{ end }}
+    </section>
+</main>
+{{ end }}

@@ -1,0 +1,27 @@
+{{ $type := "subtitle" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    {{ with (eq .icon "person") }}
+    <div class="icon">{{ partial "svg/subtitle-icon-person.svg" }}</div>
+    {{ end }}
+    {{ with (eq .icon "download") }}
+    <div class="icon">{{ partial "svg/subtitle-icon-download.svg" }}</div>
+    {{ end }}
+    {{ with (eq .icon "globe") }}
+    <div class="icon">{{ partial "svg/subtitle-icon-globe.svg" }}</div>
+    {{ end }}
+    <h2>{{ .data.headline | safeHTML }}</h2>
+</section>
+
+<section class="block__bottom">
+    <nav class="links">
+        {{ range .data.links }}
+        <a href="{{ .link }}" {{ if .newtab }}target="_blank" rel="noopener noreferrer"{{end}}>
+            <span class="adjust-baseline">{{ .name }}</span>
+            {{ partial "svg/arrow.svg" }}
+        </a>
+        {{ end }}
+    </nav>
+</section>
+{{ partial "blocks/_footer.html" . }}

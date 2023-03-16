@@ -1,0 +1,23 @@
+---
+label: 'Block: Creator'
+hide_body: true
+display_field: creator
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: creator
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: creators
+      file: 
+      path: 
+  label: Creator
+  description: Creator to feature in this block.

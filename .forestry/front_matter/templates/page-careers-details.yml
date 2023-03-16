@@ -1,0 +1,34 @@
+---
+label: 'Page: Careers Details'
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- type: boolean
+  name: draft
+  label: Draft
+  default: false
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+  default: now
+- type: textarea
+  name: description
+  label: Details
+  config:
+    required: false
+  default: ''
+  showOnly:
+    field: quotes
+    value: true
+  description: Details copy shown under the quote.
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-nav-careers
+  - section-post-careers

@@ -1,0 +1,18 @@
+[data-overlay] {
+	position: absolute;
+	will-change: opacity, transform;
+	max-width: calc(100vw - 20px);
+	opacity: 0;
+
+	.exit {
+		cursor: pointer;
+	}
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+}

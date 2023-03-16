@@ -1,0 +1,11 @@
+[data-behind] {
+	transition: opacity 0.5s ease-in-out;
+
+	&.hide {
+		opacity: 0;
+	}
+
+	.behind__wrapper {
+		padding: 40px;
+	}
+}

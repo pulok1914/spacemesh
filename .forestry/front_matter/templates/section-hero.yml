@@ -1,0 +1,58 @@
+---
+label: 'Section: Hero Home'
+hide_body: true
+display_field: hero
+fields:
+- name: hero
+  type: field_group
+  config: {}
+  fields:
+  - name: hero
+    type: include
+    config: {}
+    template: block-hero-home
+    label: Hero
+  label: Hero
+- name: creators
+  type: field_group
+  config: {}
+  fields:
+  - name: featured
+    type: include
+    config: {}
+    template: block-featured-creators
+    label: Featured
+  label: Featured Creators
+  description: Featured creators
+- type: field_group
+  name: update
+  label: Update
+  fields:
+  - name: update
+    type: include
+    config: {}
+    template: block-update
+    label: Update
+- type: field_group
+  name: discord
+  label: Discord
+  fields:
+  - name: discord
+    type: include
+    config: {}
+    template: block-discord
+    label: Discord
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: top
+    type: blocks
+    label: Top
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 4
+  label: Hidden

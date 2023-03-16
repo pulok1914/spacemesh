@@ -1,0 +1,109 @@
+---
+label: 'Block: Hero Get Started'
+hide_body: true
+display_field: headline
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+- name: button
+  type: text
+  config:
+    required: true
+  label: Button
+  description: Button copy
+- name: downloads
+  type: field_group_list
+  fields:
+  - name: os
+    type: text
+    config:
+      required: true
+    label: OS
+    description: Operating system
+  - name: url
+    type: text
+    config:
+      required: true
+    label: URL
+    description: Download URL
+  config:
+    min: 1
+    max: 
+    labelField: 
+  label: Downloads
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+    description: Label to display for the link
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+    description: Link URL
+  - name: newtab
+    type: boolean
+    label: Open In New Tab
+    description: Should the link open in a new window/tab?
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
+- name: slides
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+    description: "<strong>All images should have the same dimensions!</strong>"
+  - name: alt
+    type: text
+    config:
+      required: false
+    label: Alt
+    description: Alt text for the image
+  config:
+    min: 2
+    max: 
+    labelField: 
+  label: Slides
+  description: Screenshots of the app to show in the overlay

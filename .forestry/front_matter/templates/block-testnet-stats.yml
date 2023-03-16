@@ -1,0 +1,16 @@
+---
+label: 'Block: Testnet Stats'
+hide_body: true
+display_field: intro
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: endpoint
+  type: text
+  config:
+    required: true
+  label: Endpoint
+  description: Link to testnet JSON endpoint that has the real time stats.

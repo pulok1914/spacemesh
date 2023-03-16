@@ -1,0 +1,111 @@
+[data-block='creators-autoplay'] {
+	background-color: var(--color-gray-dark);
+	min-height: 400px;
+	cursor: pointer;
+	position: relative;
+	height: 100%;
+
+	&:hover .cursor{
+		opacity: 1;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		top: auto;
+		left: auto;
+		pointer-events: auto;
+	}
+	.block__wrapper {
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	.block__top,
+	.block__bottom {
+		z-index: 2;
+	}
+
+	.block__top {
+		pointer-events: none;
+	}
+
+	.block__bottom {
+		position: relative;
+		.name {
+			position: absolute;
+			bottom: 0;
+			color: var(--color-white);
+			will-change: opacity, transform;
+			div {
+				will-change: opacity, transform;
+			}
+		}
+	}
+
+	p.intro {
+		color: var(--color-white);
+	}
+
+	.navigation {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		padding: 40px 0;
+		float: left;
+		width: fit-content;
+		pointer-events: all;
+
+		a {
+			color: var(--color-white);
+			font-size: 20px;
+			font-weight: 900;
+			transition: color 180ms var(--ease-in-quad);
+
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+
+			@media (hover) {
+				&:hover {
+					color: var(--color-accent);
+				}
+			}
+		}
+	}
+
+	.videos {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		border-radius: var(--site-border-radius); // safari fix
+		overflow: hidden;
+		opacity: 0.6;
+
+		.creator {
+			width: 100%;
+			height: 100%;
+			// background-position: center;
+			// background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			// padding: var(--padding);
+			object-fit: cover;
+
+			&:first-child{
+				opacity: 1;
+			}
+		}
+	}
+}
+.block[data-block=creators-autoplay] {
+    grid-area: b;
+}

@@ -1,0 +1,73 @@
+[data-block='discord'] {
+	background: var(--color-smoke-light);
+
+	a {
+		color: var(--color-black);
+		&:hover {
+			color: var(--color-purple-blue);
+		}
+	}
+
+	svg.arrow path {
+		fill: var(--color-black);
+	}
+
+	&:hover {
+		background: var(--color-purple-light);
+
+		.join {
+			span {
+				transform: translateX(10px);
+			}
+		}
+	}
+
+	.block__bottom {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		.coin {
+			position: relative;
+			margin-bottom: var(--padding);
+			align-self: flex-end;
+
+			.circle {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 140px;
+				height: 140px;
+
+				// Hack to avoid re-paint.
+				// Cut off corners to prevent overlay with bottom text.
+				border-radius: 140px;
+				overflow: hidden;
+
+				img {
+					position: absolute;
+				}
+
+				img.text {
+					will-change: transform;
+					position: absolute;
+				}
+			}
+		}
+
+		.join {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+			will-change: transform;
+
+			span {
+				transition: transform 0.4s var(--ease-out-cubic);
+				position: relative;
+				top: 0.2em;
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+<div class="wt">
+    <section class="section hero">
+        {{ partial "behind/behinds.html" .hidden.top }}
+        {{ partial "blocks/cover.html" (dict "ctx" . "data" .intro "icon" "about" "classes" (slice "hero")) }}
+    </section>
+</div>

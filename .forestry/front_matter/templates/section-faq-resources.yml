@@ -1,0 +1,28 @@
+---
+label: 'Section: FAQ Resources'
+hide_body: true
+fields:
+- type: field_group
+  name: faq
+  label: FAQ
+  fields:
+  - name: faq
+    type: include
+    config: {}
+    template: block-faq
+    label: FAQ
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: main
+    type: blocks
+    label: Main
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 1
+    description: Only <strong>A</strong> position supported
+  label: Hidden

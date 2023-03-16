@@ -1,0 +1,13 @@
+{{ $type := "generic" }}
+{{ partial "behind/_behind-header.html" (merge . (dict "type" $type "position" .data.position)) }}
+<div class="wrapper">
+  {{ with .data.link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}
+    {{ with .data.image }}
+      <img src="{{ . }}" alt="" class="image" />
+    {{ end }}
+    {{ with .data.text }}
+      <div class="text">{{ . | safeHTML }}</div>
+    {{ end }}
+    {{ with .data.link }}</a>{{ end }}
+</div>
+{{ partial "behind/_behind-footer.html" . }}

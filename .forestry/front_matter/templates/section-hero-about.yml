@@ -1,0 +1,31 @@
+---
+label: 'Section: Hero about'
+hide_body: true
+display_field: intro
+fields:
+- name: intro
+  type: field_group
+  config: {}
+  fields:
+  - name: intro
+    type: include
+    config: {}
+    template: block-cover
+    label: Intro
+  label: Intro
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: top
+    type: blocks
+    label: Top
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 1
+    description: Only the <strong>A</strong> position is defined for this section!
+  label: Hidden
+  description: Hidden blocks

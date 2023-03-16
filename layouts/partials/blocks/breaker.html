@@ -1,0 +1,12 @@
+{{ $type := "breaker" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    {{ if eq .icon "star" }}
+    <img class="icon" src="/images/icons/breaker-star.svg">
+    {{ end }}
+    {{ if eq .icon "hardware" }}
+    <img class="icon" src="/images/icons/breaker-hardware.svg">
+    {{ end }}
+</section>
+{{ partial "blocks/_footer.html" . }}

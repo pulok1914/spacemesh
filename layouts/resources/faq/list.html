@@ -1,0 +1,16 @@
+{{/*  {{ define "main" }}  */}}
+
+<ul>
+    <!-- {{ .Content }} -->
+    {{ range .Sections }}
+    <li>
+        <b><Section></Section>: {{.Title}}</b>
+        {{ range .Pages }}
+            <li>Q {{.Title}}</li>
+            <li>A {{ .Content }}</li>
+        {{ end }}
+    </li>
+    {{ end }}
+</ul>
+
+{{/*  {{ end }}  */}}

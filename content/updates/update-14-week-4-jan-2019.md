@@ -1,0 +1,10 @@
++++
+count = 14
+date = 2019-01-21T16:57:16Z
+highlights = ""
+title = "Update #14 - Week 4 - Jan 2019"
+[[updates]]
+body = "<p>Easier go-spacemesh <a href=\"https://github.com/spacemeshos/go-spacemesh/pull/475\">dev environment setup</a>. This will help the core dev team and open source contributors to work more efficiently</p><p>Extended and improved the <a href=\"https://github.com/spacemeshos/go-spacemesh/pull/467\">Hare protocol test suite</a></p><p>Switched to NaCL authentication and encryption in P2P layer. <a href=\"https://github.com/spacemeshos/go-spacemesh/pull/462\">PR merged</a></p><p>Fixed some tests that failed on local machines. <a href=\"https://github.com/spacemeshos/go-spacemesh/pull/469\">#469</a> and <a href=\"https://github.com/spacemeshos/go-spacemesh/pull/466\">#466</a></p><p>Added POET prover-verifier <a href=\"https://github.com/spacemeshos/POET/commit/ed725c58ed5e4a8dbf8430d8d01184826f1a0494\">integration tests</a> for benchmarking the protocol</p><p>Announcing our #2 core dev community sync - live on Youtube on Feb 3rd <a href=\"https://youtu.be/85eazslNWqU\" title=\"https://youtu.be/85eazslNWqU\">https://youtu.be/85eazslNWqU</a> - The core dev team will answer any technical question about Spacemesh asked in our <a href=\"https://gitter.im/spacemesh-os/Lobby\">Gitter dev talk</a> as well as live questions on the Youtube stream via the chat feature</p><p>We made public our Proofs of Elapsed Time service <a href=\"https://github.com/spacemeshos/poet-ref\">reference repo</a></p><p>New post on / - Proofs of Space Time and Decentralization - video recording and slides of Iddo Bentov’s presentation in Amsterdam Bitcoin Wednesday /iddo-bitcoin-wednesday/</p><p>Finished our first UX design iteration for the Spacemesh Full Node and Wallet App for desktop computers, and <a href=\"https://docs.google.com/presentation/d/1G20T3KSt3iVmTqPJ7x9bljBA--PrPUNOpRNA9klVRSk/edit?usp=sharing\">published our learnings</a> from 2 usability testing sessions</p>"
+header = "General Update"
+
++++

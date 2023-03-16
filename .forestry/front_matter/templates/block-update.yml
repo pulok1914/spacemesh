@@ -1,0 +1,16 @@
+---
+label: 'Block: Update'
+hide_body: true
+display_field: cta
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: cta
+  type: text
+  config:
+    required: true
+  label: Call To Action
+  description: Call to action text

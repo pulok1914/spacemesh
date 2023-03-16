@@ -1,0 +1,30 @@
+{{ $type := "introHome" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<canvas class="background"></canvas>
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    <h1>{{ .data.headline | safeHTML }}</h1>
+    <p class="body">{{ .data.body | safeHTML }}</p>
+</section>
+
+<div class="coin bouncing-coin">
+    <div class="inner"></div>
+</div>
+
+<section class="block__bottom">
+    <div class="cta">
+        <a class="button download" href="{{ .data.btn_download_link }}">
+            <div class="label adjust-baseline">{{ .data.btn_download_title }}</div>
+            <div class="icon">
+                <img src="/images/arrows/arrow-download-bg.svg" width="47" height="47" alt="download button icon">
+            </div>
+        </a>
+        <a class="button outline" href="{{ .data.btn_more_link }}">
+            <div class="label adjust-baseline">{{ .data.btn_more_title }}</div>
+            <div class="icon">
+                {{ partial "svg/arrow.svg"}}
+            </div>
+        </a>
+    </div>
+</section>
+{{ partial "blocks/_footer.html" . }}

@@ -1,0 +1,48 @@
+{{ $type := "faq" }}
+{{ $faq := site.GetPage "/resources/faq" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+</section>
+
+<section class="faq">
+    <h2>FAQ</h2>
+    <ul class="categories accordion">
+        {{ range $faq.Sections }}
+        {{ $id := urlize (printf "faq-%s" .Title) }}
+        <li class="category item" id="{{ $id }}">
+            <header class="header" data-id="{{ $id }}">
+                <h3 class="adjust-baseline">{{.Title}}</h3>
+                <button class="toggle link-button">
+                    <span></span>
+                    <span></span>
+                </button>
+            </header>
+            <div class="body">
+
+                <ul class="questions">
+                    {{ range .Pages }}
+                        {{ $id := urlize (printf "faq-%s" .File.BaseFileName) }}
+                        <li class="question item" id="{{ $id }}">
+                            <div class="header" data-id="{{ $id }}">
+                                <h4 class="adjust-baseline">{{.Title | default "title" }}</h4>
+                                <button class="toggle link-button">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="body">
+                                <div class="answer">
+                                    {{ .Content }}
+                                </div>
+                            </div>
+                        </li>
+                    {{ end }}
+                </ul>
+
+            </div>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ partial "blocks/_footer.html" . }}

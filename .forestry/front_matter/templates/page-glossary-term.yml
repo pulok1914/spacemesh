@@ -1,0 +1,69 @@
+---
+label: 'Posts: Glossary Term'
+hide_body: false
+display_field: term
+fields:
+- name: term
+  type: text
+  config:
+    required: true
+  label: Term
+  description: 'The word to highlight and describe. This is what the site would make
+    clickable and use as title.<br><br><strong>Important</strong><br>This automatically
+    becomes the ID which you use to link to Arley. Example: "Proof of Space" will
+    get this ID "proof-of-space". To trigger Arley with HTML do the following: <em>&lt;a
+    href="#term:proof-of-space"&gt;Proof of Space&lt;/a&gt;<br><br></em>In Markdown:
+    [<em>Proof of Space</em>](#term:<em>proof-of-space</em>).'
+- name: hidden
+  type: boolean
+  label: Hide from Glossary
+  description: Enable this to hide the term from the glossary list on the resource
+    page.
+- name: custom_id
+  type: text
+  config:
+    required: false
+  label: Custom ID
+  description: URL-safe custom identifier. If this isn't specified the default ID
+    is the <strong>Term</strong> field encoded to be URL-safe.
+- name: order
+  type: number
+  label: Order
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 
+    step: 1
+    required: true
+  description: The glossary terms are sorted by this index. <br><em>All items have
+    0 as their order index by default.</em>
+- name: hide_button
+  type: boolean
+  label: Hide Terms Button
+  description: Disable to hide the "Learn More" button that links to the resources
+    page.
+pages:
+- content/resources/glossary/Block.md
+- content/resources/glossary/Crypto.md
+- content/resources/glossary/Decentralized.md
+- content/resources/glossary/Hare.md
+- content/resources/glossary/Hello.md
+- content/resources/glossary/Layer.md
+- content/resources/glossary/Ledger.md
+- content/resources/glossary/Mainnet.md
+- content/resources/glossary/Mesh.md
+- content/resources/glossary/Nipost.md
+- content/resources/glossary/Open-source.md
+- content/resources/glossary/Poet.md
+- content/resources/glossary/Post.md
+- content/resources/glossary/Satoshi-vision.md
+- content/resources/glossary/Smesher.md
+- content/resources/glossary/Testnet.md
+- content/resources/glossary/Tortoise.md
+- content/resources/glossary/Vote.md
+- content/resources/glossary/cryptocurrency-more.md
+- content/resources/glossary/cryptocurrency.md
+- content/resources/glossary/mining.md
+- content/resources/glossary/permissionless.md
+- content/resources/glossary/reward-many.md

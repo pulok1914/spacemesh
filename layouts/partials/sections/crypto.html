@@ -1,0 +1,7 @@
+<div class="home pd-btm">
+    <section class="section crypto">
+        {{ partial "behind/behinds.html" .hidden.bottom }}
+        {{ partial "blocks/testnet.html" (dict "ctx" . "data" .testnet ) }}
+        {{ partial "blocks/crypto-news.html" (dict "ctx" . "data" .news ) }}
+    </section>
+</div>

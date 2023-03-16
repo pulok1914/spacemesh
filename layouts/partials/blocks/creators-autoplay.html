@@ -1,0 +1,45 @@
+{{ $type := "creators" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+{{ $site := .ctx.Site }}
+{{ $ctx := .ctx }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    <nav class="navigation">
+        {{ range .data.featured }}
+            {{ with site.GetPage . }}
+                <a href="#">{{ .Params.firstname }}{{ with .Params.lastname }} {{.}}{{end}}</a>
+            {{ end }}
+        {{ end }}
+    </nav>
+</section>
+
+<div class="videos">
+{{ range .data.featured }}
+{{ with site.GetPage . }}
+    <video
+        class="creator"
+
+        autoplay loop muted playsinline
+        poster="{{ .Params.thumbnail }}" 
+
+        data-name="{{ .Params.firstname }} {{ .Params.lastname }}"
+        data-video="{{ .Params.video }}"
+        data-id="{{ .Params.vimeo_id }}"
+        data-subtitle="{{ .Params.subtitle }}"
+    > 
+        <source src="{{ .Params.video }}" type="video/mp4">
+    </video>
+{{ end }}
+{{ end }}
+</div>
+
+<section class="block__bottom">
+    <p class="name name--a"></p>
+    <p class="name name--b"></p>
+</section>
+
+<div class="play cursor">
+    <div class="icon play"></div>
+</div>
+
+{{ partial "blocks/_footer.html" . }}

@@ -1,0 +1,9 @@
+<div class="start pd-btm">
+    <section class="section community" id="community">
+        {{ partial "behind/behinds.html" .hidden.bottom }}
+        {{ partial "blocks/subtitle.html" (dict "ctx" . "data" .subtitle "icon" "download") }}
+        {{ partial "blocks/connect.html" (dict "ctx" . "data" .connect "id" "community-connect") }}
+        {{ partial "blocks/repos.html" (dict "ctx" . "data" .repos "id" "community-repos") }}
+        {{ partial "blocks/single-creator.html" (dict "ctx" . "data" .creator "id" "community-creator") }}
+    </section>
+</div>

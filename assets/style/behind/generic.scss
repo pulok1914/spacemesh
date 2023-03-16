@@ -1,0 +1,23 @@
+[data-behind='generic'] {
+	border-radius: var(--site-border-radius);
+	color: var(--color-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	text-align: center;
+
+	// debug only
+	// background-color: red;
+	// opacity: 1!important;
+
+	a {
+		color: var(--color-accent);
+		display: block;
+	}
+
+	img {
+		max-width: 200px;
+		max-height: 150px;
+	}
+}

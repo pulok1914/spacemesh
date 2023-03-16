@@ -1,0 +1,53 @@
+[data-block='repos'] {
+	background-color: var(--color-smoke-light);
+
+	.block__bottom {
+		margin-top: 80px;
+		@media (min-width: $break-laptop-l) {
+			margin-top: 0;
+		}
+	}
+
+	a.repo {
+		background-color: var(--color-white);
+		border-radius: 1.25rem;
+		padding: 1.25rem;
+		color: var(--color-black);
+		display: block;
+		text-transform: none;
+
+		&:hover {
+			background-color: var(--color-accent);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+		h5 {
+			position: relative;
+			font-weight: bold;
+			padding-left: 1.5em;
+			margin-bottom: 1em;
+		}
+
+		h5::before {
+			position: absolute;
+			top: -0.15em;
+			bottom: 0;
+			left: 0;
+			width: 1em;
+			content: ' ';
+			display: inline-flex;
+			background-image: url('/images/icons/github-repo.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		p {
+			font-weight: 200;
+			font-size: 0.875rem;
+			line-height: 1.3;
+		}
+	}
+}

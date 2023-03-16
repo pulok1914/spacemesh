@@ -1,0 +1,7 @@
+<div class="about pd-btm">
+    <section class="section">
+        {{ partial "behind/behinds.html" .hidden.main }}
+        {{ partial "blocks/community-large.html" (dict "ctx" . "data" .community "id" .community.id) }}
+    </section>
+</div>
+

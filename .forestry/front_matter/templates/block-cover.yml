@@ -1,0 +1,48 @@
+---
+label: 'Block: Cover'
+hide_body: true
+fields:
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+  description: Cover headline
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+  description: Main copy
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+  description: Top left intro copy
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+    description: Name of the link to display
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+    description: Link destination. Internal or external.
+    default: https://example.com
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
+  description: 'Links at the bottom. Use #id to link to internal elements on the page.'

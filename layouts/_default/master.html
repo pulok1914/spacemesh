@@ -1,0 +1,55 @@
+{{ define "main" }}
+<main class="main">
+  {{ range .Params.page_sections }}
+    {{ if eq "section-top-nav" .template }}
+        {{ partial "sections/top-nav.html" . }}
+    {{ end }}
+    {{ if eq "section-hero" .template }}
+      {{ partial "sections/hero.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-about" .template }}
+        {{ partial "sections/hero-about.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-events" .template }}
+        {{ partial "sections/hero-events.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-start" .template }}
+        {{ partial "sections/hero-start.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-resources" .template }}
+        {{ partial "sections/hero-resources.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-updates" .template }}
+        {{ partial "sections/hero-updates.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-careers" .template }}
+        {{ partial "sections/hero-careers.html" . }}
+    {{ end }}
+    {{ if eq "section-community" .template }}
+        {{ partial "sections/community.html" . }}
+    {{ end }}
+    {{ if eq "section-community-about" .template }}
+        {{ partial "sections/community-about.html" . }}
+    {{ end }}
+    {{ if eq "section-community-start" .template }}
+        {{ partial "sections/community-start.html" . }}
+    {{ end }}
+    {{ if eq "section-crypto" .template }}
+        {{ partial "sections/crypto.html" . }}
+    {{ end }}
+    {{ if eq "section-hardware-start" .template }}
+        {{ partial "sections/hardware-start.html" . }}
+    {{ end }}
+    {{ if eq "section-others-resources" .template }}
+        {{ partial "sections/others-resources.html" . }}
+    {{ end }}
+    {{ if eq "section-team-about" .template }}
+        {{ partial "sections/team-about.html" . }}
+    {{ end }}
+    {{ if eq "section-post" .template }}
+        {{ partial "sections/single-post.html" . }}
+    {{ end }}
+
+  {{ end }}
+</main>
+{{ end }}

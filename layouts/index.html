@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="main home">
+  {{ range .Params.page_sections }}
+    {{ if eq "section-hero" .template }}
+      {{ partial "sections/hero.html" . }}
+    {{ end }}
+    {{ if eq "section-community" .template }}
+        {{ partial "sections/community.html" . }}
+    {{ end }}
+    {{ if eq "section-crypto" .template }}
+        {{ partial "sections/crypto.html" . }}
+    {{ end }}
+  {{ end }}
+</main>
+
+{{ end }}

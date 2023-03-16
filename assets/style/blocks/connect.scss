@@ -1,0 +1,110 @@
+[data-block='connect'] {
+	background-color: var(--color-smoke-light);
+	position: relative;
+
+	a {
+		color: var(--color-black);
+		&:hover {
+			color: var(--color-purple-blue);
+		}
+	}
+
+	.dragarea {
+		width: calc(100% - 80px);
+	}
+
+	.block__top {
+		display: flex;
+		justify-content: space-between;
+		margin-right: 0;
+
+		.nav {
+			flex-shrink: 0;
+			a {
+				padding: 20px;
+			}
+			a.disabled {
+				opacity: 0.4;
+				cursor: default;
+			}
+			.prev {
+				padding-right: 10px;
+			}
+			.next {
+				padding-left: 10px;
+			}
+		}
+	}
+
+	.wrapper {
+		position: relative;
+		height: 150px;
+		margin-top: 80px;
+
+		@media (min-width: $break-tablet) {
+			margin-top: 130px;
+			height: 200px;
+		}
+	}
+
+	.channels {
+		position: absolute;
+		bottom: 0;
+
+		display: flex;
+		justify-content: space-between;
+		padding-left: var(--padding);
+		padding-right: calc(var(--padding) / 2);
+		padding-bottom: var(--padding);
+		display: flex;
+		flex-wrap: nowrap;
+		height: 100%;
+	}
+
+	.channel {
+		width: 220px;
+		height: 100%;
+		margin-right: calc(var(--padding) / 2);
+	}
+
+	.channel__inner {
+		background-color: var(--color-white);
+		border-radius: 20px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding: 0.85em 1em;
+		height: 100%;
+		color: var(--color-black);
+
+		&:hover {
+			background-color: var(--color-hover);
+		}
+	}
+
+	.channel__name {
+		font-size: 1.225rem;
+		padding-top: 0.25em;
+
+		@media (min-width: $break-tablet) {
+			font-size: 1.625rem;
+		}
+	}
+
+	.channel__footer {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			color: var(--color-black);
+		}
+
+		svg {
+			transform: rotate(-45deg);
+		}
+
+		svg.arrow path {
+			fill: var(--color-black);
+		}
+	}
+}

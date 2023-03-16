@@ -1,0 +1,50 @@
+<footer class="site-footer">
+    <div class="primary">
+        <nav class="links">
+            <div class="links__left">
+                <ul class="left__primary">
+                    {{ range .Site.Menus.primary }}
+                    <li>
+                        <a href="{{ .URL }}">
+                            <span>{{ .Name }}</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+
+                <ul class="left__external">
+                    {{ range .Site.Menus.external }}
+                    <li>
+                        <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+                            <span>{{ .Name }}</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <ul class="links__social">
+                {{ range .Site.Menus.social }}
+                <li>
+                    <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+
+        <a class="top" href="#">
+            {{ partial "svg/arrow.svg" }}
+        </a>
+    </div>
+
+    <div class="newsletter" id="newsletter">
+        <p>{{ .Site.Data.globals.newsletter }}</p>
+        {{ partial "newsletter" (dict "ctx" . )}}
+    </div>
+    <div class="legal">
+        <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="/terms" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+    </div>
+</footer>

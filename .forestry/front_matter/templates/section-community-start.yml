@@ -1,0 +1,55 @@
+---
+label: 'Section: Community Start'
+hide_body: true
+fields:
+- type: field_group
+  name: subtitle
+  label: Subtitle
+  fields:
+  - name: subtitle
+    type: include
+    config: {}
+    template: block-subtitle
+    label: Subtitle
+- type: field_group
+  name: connect
+  label: Connect
+  fields:
+  - name: connect
+    type: include
+    config: {}
+    template: block-connect
+    label: Connect
+- type: field_group
+  name: repos
+  label: Repos
+  fields:
+  - name: repos
+    type: include
+    config: {}
+    template: block-repos
+    label: Repos
+- type: field_group
+  name: creator
+  label: Creator
+  fields:
+  - name: creator
+    type: include
+    config: {}
+    template: block-creator
+    label: Creator
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: bottom
+    type: blocks
+    label: Bottom
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 4
+  label: Hidden
+  description: Hidden blocks

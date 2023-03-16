@@ -1,0 +1,40 @@
+{{ $type := "creatorsLarge" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+
+{{ $ctx := .ctx }}
+{{ $data := .data }}
+
+{{ with (site.GetPage "creators") }}
+{{ range where .Pages "Params.quotes" true }}
+    <div 
+        class="quote"
+        data-name="{{ .Params.firstname }} {{ .Params.lastname }}"
+        data-video="{{ .Params.video }}"
+        data-id="{{ .Params.vimeo_id }}"
+        data-subtitle="{{ .Params.subtitle }}"
+    >
+        <section class="block__top">
+            <p class="intro">{{ $data.intro | safeHTML }}</p>
+            <h2>{{ .Params.quote | safeHTML }}</h2>
+        </section>
+
+        <section class="block__bottom">
+
+            <div class="details">
+                <div>
+                    <p class="name">{{ .Params.firstname }}{{ with .Params.lastname }} {{.}}{{end}}</p>
+                </div>
+                <div class="description">
+                    {{ .Params.description | safeHTML }}
+                </div>
+            </div>
+        </section>
+    </div>
+{{ end }}
+{{ end }}
+
+<div class="play cursor">
+    <div class="icon play"></div>
+</div>
+
+{{ partial "blocks/_footer.html" . }}

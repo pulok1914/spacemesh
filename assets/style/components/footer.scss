@@ -1,0 +1,139 @@
+.site-footer {
+	margin-top: 130px;
+	color: var(--color-white);
+	padding-bottom: 20px;
+	line-height: 1.82;
+
+	.primary {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 80px;
+
+		@media (min-width: $break-laptop) {
+			margin-bottom: 200px;
+		}
+
+		.top {
+			margin-left: 30px;
+			@media (min-width: $break-laptop) {
+				margin-left: 50px;
+			}
+
+			svg {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+
+	.links {
+		display: flex;
+		justify-content: space-between;
+		text-transform: uppercase;
+		width: 100%;
+		font-size: 0.813rem;
+		flex-direction: column;
+
+		@media (min-width: $break-laptop) {
+			flex-direction: row;
+		}
+
+		a {
+			color: var(--color-white);
+
+			&:hover {
+				color: var(--color-accent);
+			}
+		}
+
+		.links__left {
+			display: flex;
+			margin-bottom: 20px;
+			flex-direction: column;
+
+			@media (min-width: 400px) {
+				flex-direction: row;
+			}
+
+			@media (min-width: $break-laptop) {
+				margin-bottom: 0;
+			}
+
+			.left__primary {
+				margin-right: 100px;
+			}
+
+			.left__external {
+			}
+		}
+
+		.links__social {
+			@media (min-width: $break-laptop) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr 1fr 1fr;
+				grid-column-gap: 50px;
+				height: min-content;
+			}
+		}
+	}
+
+	.newsletter {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@media (min-width: $break-laptop) {
+			flex-direction: row;
+		}
+
+		p {
+			text-transform: uppercase;
+			max-width: 360px;
+			color: var(--color-white);
+			opacity: 0.5;
+			margin-bottom: 40px;
+			font-size: 0.813rem;
+
+			@media (min-width: $break-tablet) {
+				margin-bottom: 20px;
+			}
+
+			@media (min-width: $break-laptop) {
+				margin-bottom: 0;
+			}
+		}
+
+		.newsletter-subscribe {
+			max-width: 970px;
+			flex-grow: 1;
+
+			.button {
+				font-size: 0.8rem;
+				@media (min-width: $break-tablet) {
+					font-size: 0.9rem;
+				}
+				@media (min-width: $break-laptop) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	.legal {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 50px;
+
+		a {
+			white-space: nowrap;
+			font-size: 0.875rem;
+			margin-top: 2em;
+			color: var(--color-white);
+			opacity: 0.5;
+
+			@media (min-width: $break-tablet) {
+				margin-top: 0;
+			}
+		}
+	}
+}

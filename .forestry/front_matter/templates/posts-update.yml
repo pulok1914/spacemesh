@@ -1,0 +1,167 @@
+---
+label: 'Posts: Update'
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: count
+  type: number
+  label: Release Number
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 0
+    max: 
+    step: 1
+    required: true
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+- name: highlights
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Highlights
+  description: Top box with highlights in bullet list
+- name: updates
+  type: field_group_list
+  fields:
+  - name: header
+    type: text
+    config:
+      required: true
+    label: Header
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Body
+  config:
+    min: 1
+    max: 
+    labelField: 
+  label: Updates
+pages:
+- content/updates/tweedledee-1.md
+- content/updates/tweedledee-10.md
+- content/updates/tweedledee-11.md
+- content/updates/tweedledee-12.md
+- content/updates/tweedledee-13.md
+- content/updates/tweedledee-15.md
+- content/updates/tweedledee-16.md
+- content/updates/tweedledee-17.md
+- content/updates/tweedledee-2.md
+- content/updates/tweedledee-3.md
+- content/updates/tweedledee-4.md
+- content/updates/tweedledee-5.md
+- content/updates/tweedledee-6.md
+- content/updates/tweedledee-7.md
+- content/updates/tweedledee-8.md
+- content/updates/tweedledee-9.md
+- content/updates/tweedledee-net-123-1.md
+- content/updates/tweedledee-net-123.md
+- content/updates/tweedledee-net-124.md
+- content/updates/tweedledee-net-126-1.md
+- content/updates/tweedledee-net-126-2.md
+- content/updates/tweedledee-net-126-3.md
+- content/updates/tweedledee-net-126.md
+- content/updates/tweedledee-net-128.md
+- content/updates/tweedledee-net-129.md
+- content/updates/tweedledee-net-131.md
+- content/updates/tweedledee-net-132.md
+- content/updates/tweedledee.md
+- content/updates/update-1-week-4-august-2018.md
+- content/updates/update-10-week-4-december-2018.md
+- content/updates/update-100-january-2022.md
+- content/updates/update-101-february-2022.md
+- content/updates/update-102-march-2022.md
+- content/updates/update-103-april-2022.md
+- content/updates/update-106-july-2022.md
+- content/updates/update-11-week-1-jan-2019.md
+- content/updates/update-12-week-2-jan-2019.md
+- content/updates/update-13-week-3-jan-2019.md
+- content/updates/update-14-week-4-jan-2019.md
+- content/updates/update-15-week-1-feb-2019.md
+- content/updates/update-16-week-2-feb-2019.md
+- content/updates/update-17-week-3-feb-2019.md
+- content/updates/update-18-week-4-feb-2019.md
+- content/updates/update-19-week-1-march-2019.md
+- content/updates/update-2-week-1-september-2018.md
+- content/updates/update-20-week-2-march-2019.md
+- content/updates/update-21-week-3-march-2019.md
+- content/updates/update-22-week-4-march-2019.md
+- content/updates/update-23-week-1-april-2019.md
+- content/updates/update-24-week-2-april-2019.md
+- content/updates/update-25-week-3-april-2019.md
+- content/updates/update-26-week-4-april-2019.md
+- content/updates/update-27-week-1-may-2019.md
+- content/updates/update-28-week-2-may-2019.md
+- content/updates/update-29-week-3-may-2019.md
+- content/updates/update-3-week-1-and-2-october-2018.md
+- content/updates/update-30-week-4-may-2019.md
+- content/updates/update-31-week-1-june-2019.md
+- content/updates/update-32-week-2-june-2019.md
+- content/updates/update-33-week-3-june-2019.md
+- content/updates/update-34-week-4-june-2019.md
+- content/updates/update-35-week-1-july-2019.md
+- content/updates/update-36-week-2-july-2019.md
+- content/updates/update-37-week-3-july-2019.md
+- content/updates/update-38-week-4-july-2019.md
+- content/updates/update-39-week-1-august-2019.md
+- content/updates/update-4-week-3-october-2018.md
+- content/updates/update-40-week-2-september-2019.md
+- content/updates/update-41-week-3-september-2019.md
+- content/updates/update-42-week-4-september-2019.md
+- content/updates/update-43-week-1-october-2019.md
+- content/updates/update-44-week-2-october-2019.md
+- content/updates/update-45-week-3-october-2019.md
+- content/updates/update-46-week-4-october-2019.md
+- content/updates/update-47-week-5-october-2019.md
+- content/updates/update-48-week-1-november-2019.md
+- content/updates/update-49-week-2-november-2019.md
+- content/updates/update-5-week-4-october-2018.md
+- content/updates/update-50-week-3-november-2019.md
+- content/updates/update-51-week-4-november-2019.md
+- content/updates/update-52-week-1-december-2019.md
+- content/updates/update-53-week-2-december-2019.md
+- content/updates/update-54-week-3-4-december-2019.md
+- content/updates/update-55-week-1-2-january-2020.md
+- content/updates/update-56-week-3-4-january-2020.md
+- content/updates/update-57-week-1-2-february-2020.md
+- content/updates/update-58-week-3-4-february-2020.md
+- content/updates/update-59-week-1-2-march-2020.md
+- content/updates/update-6-week-1-and-2-november-2018.md
+- content/updates/update-7-week-3-november-2018.md
+- content/updates/update-8-week-1-2-december-2018.md
+- content/updates/update-89-weeks-3-4-june-2021.md
+- content/updates/update-9-week-3-december-2018.md
+- content/updates/update-90-weeks-1-2-july-2021.md
+- content/updates/update-91-weeks-3-4-july-2021.md
+- content/updates/update-92-weeks-1-2-august-2021.md
+- content/updates/update-93-weeks-3-4-august-2021.md
+- content/updates/update-94-weeks-1-2-september-2021.md
+- content/updates/update-95-weeks-3-4-september-2021.md
+- content/updates/update-96-weeks-1-2-october-2021.md
+- content/updates/update-97-weeks-3-4-october-2021.md
+- content/updates/update-98-december-2021.md
+- content/updates/update-98-november-2021.md

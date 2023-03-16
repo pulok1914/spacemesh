@@ -1,0 +1,9 @@
+<div class="hero__top-buttons">
+    <a href="#" class="hero__back-button" onclick="event.preventDefault();history.back()">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.7691 0.5L0.886719 11L10.7691 21.5" stroke="white"/>
+            <path d="M0.886719 11H21.8867" stroke="white"/>
+        </svg>
+    </a>
+    <a href="{{.top_btn.link}}" class="hero__events-link">{{.data.label | markdownify}}</a>
+</div>

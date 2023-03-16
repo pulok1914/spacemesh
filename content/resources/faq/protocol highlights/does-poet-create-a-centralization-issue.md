@@ -1,0 +1,5 @@
++++
+title = "Does PoET create a centralization issue?"
+
++++
+Not really. Spacemesh PoET is a free open source reference implementation that is designed to be run by multiple parties without any limitation. For the mainnet platform release, PoET servers will be configurable to require a small transaction free from smeshers who use the service. This will make running PoET services profitable to 3rd parties in a decentralized market context. Spacemesh will run few foundation PoET servers as a safety measure to ensure that there will always be at least one live PoET service available for protocol participants. Unlike other platforms which use sequential work, Spacemesh smeshers running on desktop PCs at home are not expected to run the PoET service on their systems. Spacemesh PoET is also trustless in the sense that smeshers verify PoET service results and don’t need to trust a PoET service operator.

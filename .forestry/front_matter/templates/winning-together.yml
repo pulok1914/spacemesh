@@ -1,0 +1,22 @@
+---
+label: Winning Together
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: type
+  label: Type
+  hidden: true
+- type: boolean
+  name: draft
+  label: Draft
+  default: false
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-hero-wt
+  - section-wt
+  - section-team-wt

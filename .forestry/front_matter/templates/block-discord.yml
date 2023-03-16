@@ -1,0 +1,22 @@
+---
+label: 'Block: Discord'
+hide_body: true
+display_field: cta
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: cta
+  type: text
+  config:
+    required: true
+  label: CTA
+  description: Call to action text.
+- name: link
+  type: text
+  config:
+    required: true
+  label: Link
+  description: Discord invite link

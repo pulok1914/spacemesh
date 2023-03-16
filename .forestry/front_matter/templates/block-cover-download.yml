@@ -1,0 +1,71 @@
+---
+label: 'Block: Cover Download'
+hide_body: true
+display_field: headline
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+  description: Simple HTML to activate Arley is allowed.
+- name: button
+  type: text
+  config:
+    required: true
+  label: Button
+  description: Download Button Copy
+- name: downloads
+  type: field_group_list
+  fields:
+  - name: os
+    type: text
+    config:
+      required: true
+    label: OS
+    description: Operating system label
+  - name: url
+    type: text
+    config:
+      required: true
+    label: Download URL
+    description: Direct link to file
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Downloads
+  description: Download links inside button
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
+  description: Standard cover links

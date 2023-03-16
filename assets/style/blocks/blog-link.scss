@@ -1,0 +1,36 @@
+[data-block='blogLink'] {
+	background-color: var(--color-gray-light);
+
+	&:hover {
+		background-color: var(--color-gray-dark);
+	}
+
+	a {
+		color: var(--color-white);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&:hover {
+			color: var(--color-accent);
+
+			svg path {
+				fill: var(--color-accent);
+			}
+		}
+
+		@media (min-width: $break-laptop) {
+			min-height: 200px;
+		}
+	}
+
+	.block__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		path {
+			fill: var(--color-white);
+		}
+	}
+}

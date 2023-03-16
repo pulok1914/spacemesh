@@ -1,0 +1,14 @@
+---
+label: 'Section: Top Navigation'
+hide_body: true
+fields:
+- type: field_group
+  name: top_btn
+  label: Button
+  fields:
+  - type: text
+    name: label
+    label: Label
+  - type: text
+    name: link
+    label: Link

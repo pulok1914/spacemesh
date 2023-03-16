@@ -1,0 +1,64 @@
+---
+label: 'Section: Hardware Start'
+hide_body: true
+fields:
+- type: field_group
+  name: resources
+  label: Resources
+  fields:
+  - name: resources
+    type: include
+    config: {}
+    template: block-start-resources
+    label: resources
+- type: field_group
+  name: video
+  label: Video
+  fields:
+  - name: video
+    type: include
+    config: {}
+    template: block-start-video
+    label: video
+- type: field_group
+  name: requirements
+  label: Requirements
+  fields:
+  - name: Requirements
+    type: include
+    config: {}
+    template: block-start-link
+    label: requirements
+- type: field_group
+  name: hardware
+  label: Hardware
+  fields:
+  - name: hardware
+    type: include
+    config: {}
+    template: block-start-link
+    label: Hardware
+- type: field_group
+  name: apply
+  label: Apply
+  fields:
+  - name: apply
+    type: include
+    config: {}
+    template: block-start-link
+    label: Apply
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: main
+    type: blocks
+    label: Main
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 3
+  label: Hidden
+  description: Hidden blocks

@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<main class="main">
+  {{ range .Params.page_sections }}
+    {{ if eq "section-hero-resources" .template }}
+      {{ partial "sections/hero-resources.html" . }}
+    {{ end }}
+    {{ if eq "section-faq-resources" .template }}
+        {{ partial "sections/faq-resources.html" . }}
+    {{ end }}
+    {{ if eq "section-others-resources" .template }}
+        {{ partial "sections/others-resources.html" . }}
+    {{ end }}
+  {{ end }}
+</main>
+
+{{ end }}

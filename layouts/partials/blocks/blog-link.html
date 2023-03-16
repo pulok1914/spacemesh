@@ -1,0 +1,15 @@
+{{ $type := "blogLink" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<a href="/blog">
+    <section class="block__top">
+        <p class="intro">{{ .data.intro | safeHTML }}</p>
+    </section>
+
+    <section class="block__bottom">
+
+        <span class="adjust-baseline">See All</span>
+        {{ partial "svg/arrow.svg" }}
+
+    </section>
+</a>
+{{ partial "blocks/_footer.html" . }}

@@ -1,0 +1,7 @@
+<div class="updates pd-btm">
+    <section class="section updates">
+        {{ range first 200 .Pages.ByDate.Reverse }}
+        {{ partial "blocks/update-post.html" (dict "ctx" . ) }}
+        {{ end }}
+    </section>
+</div>

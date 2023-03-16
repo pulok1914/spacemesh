@@ -1,0 +1,10 @@
+<div class="start pd-btm">
+    <section class="section hardware" id="hardware">
+        {{ partial "behind/behinds.html" .hidden.main }}
+        {{ partial "blocks/start-resources.html" (dict "ctx" . "data" .resources "classes" (slice "resources")) }}
+        {{ partial "blocks/start-video.html" (dict "ctx" . "data" .video "classes" (slice "video")) }}
+        {{ partial "blocks/start-link.html" (dict "ctx" . "data" .requirements "classes" (slice "requirements") "icon" "requirements") }}
+        {{ partial "blocks/start-link.html" (dict "ctx" . "data" .hardware "classes" (slice "hardware") "icon" "hardware") }}
+        {{ partial "blocks/start-link.html" (dict "ctx" . "data" .apply "classes" (slice "apply") "icon" "apply") }}
+    </section>
+</div>

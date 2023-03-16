@@ -1,0 +1,4 @@
+<article {{with .data.dashboardURL}}onclick='window.location = "{{.| safeURL}}";'{{end}}
+class="block {{with .classes}}{{delimit . " "}}{{end}}{{ if .data.disabled }} disabled{{ end }}" data-block="{{ .type | default "empty" }}" {{with .id}}id="{{.}}"{{end}}>
+    <div class="dragarea"></div>
+    <div class="block__wrapper">

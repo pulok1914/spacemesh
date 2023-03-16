@@ -1,0 +1,21 @@
+{{ $type := "update" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+</section>
+
+<section class="block__bottom">
+    {{ with (site.GetPage "updates") }}
+    {{ range first 1 .Pages.ByPublishDate.Reverse }}
+    <a href="/updates">
+        <div class="date">{{ .Date.Format "01.02.2006" }}</div>
+        <h4>{{ .Title }}</h4>
+    </a>
+    {{ end }}
+    {{ end }}
+    <a class="join" href="/updates">
+        <span>{{ .data.cta }}</span>
+        {{ partial "svg/arrow.svg" }}
+    </a>
+</section>
+{{ partial "blocks/_footer.html" . }}

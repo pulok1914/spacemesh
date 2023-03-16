@@ -1,0 +1,30 @@
+{{ $type := "blogPost" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+
+{{ $offset := .offset }}
+{{ with site.GetPage "blog" }}
+{{ range first 1 (after $offset .Pages.ByDate.Reverse ) }}
+<a href="{{ .RelPermalink }}">
+    <section class="cover">
+        <img data-src="{{ .Params.cover }}" class="lazyload" alt="cover image">
+    </section>
+    <div class="details">
+        <div class="meta">
+            <ul class="categories">
+                {{ range (.GetTerms "categories") }}
+                <li class="pill">
+                    <span class="adjust-baseline">{{ .LinkTitle }}</span>
+                </li>
+                {{ end }}
+            </ul>
+            <div class="date">
+                {{.Date.Format "01.02.2006"}}
+            </div>
+        </div>
+        <h2>{{ .Title }}</h2>
+    </div>
+</a>
+{{ end }}
+{{ end }}
+
+{{ partial "blocks/_footer.html" . }}

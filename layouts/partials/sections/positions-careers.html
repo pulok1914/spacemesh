@@ -1,0 +1,22 @@
+<div class="careers pd-btm">
+    <section class="section positions" id="jobs">
+        {{ $cta := .Params.btn_cta }}
+        {{ range .Pages }}
+            <article onclick="event.stopPropagation();
+            window.location = {{ .RelPermalink }};" 
+            class="block careers__block" data-block="position">
+                <div class="block__wrapper">
+                    <h2>{{ .Title }}</h2>
+                    <div class="details">
+                        <div class="description">{{ .Params.description | safeHTML }}</div>
+                        <a class="more" href="{{ .RelPermalink }}">
+                            <span>{{ $cta }}</span>
+                            {{ partial "svg/arrow.svg" }}
+                        </a>
+                    </div>
+                </div>
+            </article>
+        {{ end }}
+        <script src="/js/script.js"></script>
+    </section>
+</div>

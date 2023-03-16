@@ -1,0 +1,24 @@
+---
+label: 'Page: Events'
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: layout
+  label: layout
+  default: events-landing
+  hidden: true
+- type: boolean
+  name: draft
+  label: Draft
+  default: false
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-hero-events
+  - section-faq-events
+pages:
+- content/events/_index.md

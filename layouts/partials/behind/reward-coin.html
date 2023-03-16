@@ -1,0 +1,9 @@
+{{ $type := "rewardCoin" }}
+{{ partial "behind/_behind-header.html" (merge . (dict "type" $type "position" .data.position)) }}
+<a href="{{ .data.link }}" target="_blank" rel="noopener noreferrer">
+  <video width="200" height="200" preload="none" autoplay muted loop playsinline>
+      <source src="/videos/coin.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+    </video>
+</a>
+{{ partial "behind/_behind-footer.html" . }}

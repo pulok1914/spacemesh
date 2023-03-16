@@ -1,0 +1,82 @@
+---
+label: 'Section: Community'
+hide_body: true
+fields:
+- type: field_group
+  name: breaker
+  label: Breaker
+  fields:
+  - name: breaker
+    type: include
+    config: {}
+    template: block-breaker
+    label: Breaker
+- type: field_group
+  name: cases
+  fields:
+  - type: text
+    name: intro
+    label: intro
+    description: Intro copy in the top left
+  label: Creator Quotes
+  description: Block with random quotes from any creator that has quote enabled.
+- type: field_group
+  name: subtitle
+  label: Subtitle
+  fields:
+  - name: subtitle
+    type: include
+    config: {}
+    template: block-subtitle
+    label: Subtitle
+- type: field_group
+  name: connect
+  label: Connect
+  fields:
+  - name: connect
+    type: include
+    config: {}
+    template: block-connect
+    label: Connect
+- type: field_group
+  name: repos
+  label: Repos
+  fields:
+  - name: repos
+    type: include
+    config: {}
+    template: block-repos
+    label: Repos
+- type: field_group
+  name: creator
+  label: Creator
+  fields:
+  - name: creator
+    type: include
+    config: {}
+    template: block-creator
+    label: Creator
+- type: field_group
+  name: blogLink
+  label: Blog Link
+  fields:
+  - name: blog_link
+    type: include
+    config: {}
+    template: block-blog-link
+    label: Blog Link
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: main
+    type: blocks
+    label: Main
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 8
+  label: Hidden
+  description: Configure hidden blocks on the page.

@@ -1,0 +1,12 @@
+---
+label: 'Section: Header Blog'
+hide_body: true
+display_field: intro
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+  description: Intro copy at the top of the page. Use &lt;span&gt;content&lt;/span&gt;
+    elements to mark it as bold.

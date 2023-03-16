@@ -1,0 +1,15 @@
+{{ $type := "repos" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+</section>
+
+<section class="block__bottom">
+    {{ range first 2 .data.links }}
+    <a class="repo" href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+        <h5>{{ .name }}</h5>
+        <p>{{ .description }}</p>
+    </a>
+    {{ end }}
+</section>
+{{ partial "blocks/_footer.html" . }}

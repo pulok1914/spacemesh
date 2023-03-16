@@ -1,0 +1,33 @@
+---
+label: 'Posts: Job Posting'
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+  description: Job posting title.
+- type: textarea
+  name: description
+  label: Description
+  description: Short job description
+  config:
+    wysiwyg: false
+    required: true
+  default: ''
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
+pages:
+- content/careers/app-dev.md
+- content/careers/applied-crypto.md
+- content/careers/devops-automation-dev.md

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main class="main careers-post">
+  {{ range .Params.page_sections }}
+    {{ if eq "section-nav-careers" .template }}
+      {{ partial "sections/nav-careers.html" . }}
+    {{ end }}
+    {{ if eq "section-post-careers" .template }}
+        {{ partial "sections/post-careers.html" $ }}
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}

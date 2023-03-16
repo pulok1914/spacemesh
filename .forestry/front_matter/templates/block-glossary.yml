@@ -1,0 +1,22 @@
+---
+label: 'Block: Glossary'
+hide_body: true
+display_field: headline
+fields:
+- name: id
+  type: text
+  config:
+    required: true
+  label: Id
+  description: Do not change
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+  description: Intro copy
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline

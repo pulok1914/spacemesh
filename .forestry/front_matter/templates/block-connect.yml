@@ -1,0 +1,46 @@
+---
+label: 'Block: Connect'
+hide_body: true
+display_field: intro
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+    description: Name to display
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+    description: Full URL to open channel.
+  - name: channel
+    type: text
+    config:
+      required: true
+    label: Channel
+    description: Name of the channel, e.g. Discord and Telegram
+  - name: color
+    type: color
+    label: Color
+    default: "#3affa7"
+    config:
+      required: false
+      color_format: Hex
+    description: Color used for the hover effect. Use this to match the service, blue
+      for Telegram, purple for Discord etc.
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links
+  description: Links to the different channels.

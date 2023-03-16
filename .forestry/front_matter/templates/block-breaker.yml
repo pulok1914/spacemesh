@@ -1,0 +1,10 @@
+---
+label: 'Block: Breaker'
+hide_body: true
+display_field: cta
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro

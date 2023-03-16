@@ -1,0 +1,27 @@
+---
+label: 'Block: Start Video'
+hide_body: true
+display_field: headline
+fields:
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: body
+  type: text
+  config:
+    required: true
+  label: Body
+- name: video
+  type: text
+  config:
+    required: true
+  label: Video
+  description: Video URL
+- name: vimeo_id
+  type: text
+  config:
+    required: true
+  label: Vimeo ID
+  description: Vimeo video ID

@@ -1,0 +1,7 @@
+<div class="resources pd-btm">
+    <section class="section other">
+        {{ partial "behind/behinds.html" .hidden.bottom }}
+        {{ partial "blocks/glossary.html" (dict "ctx" . "data" .glossary "id" .glossary.id) }}
+        {{ partial "blocks/other-resources.html" (dict "ctx" . "data" .other "id" .other.id) }}
+    </section>
+</div>

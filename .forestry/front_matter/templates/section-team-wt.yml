@@ -1,0 +1,41 @@
+---
+label: 'Section: Team WT'
+hide_body: true
+fields:
+- name: subtitle
+  type: field_group
+  config: {}
+  fields:
+  - name: subtitle
+    type: include
+    config: {}
+    template: block-subtitle
+    label: Subtitle
+  label: Subtitle
+- name: team
+  type: field_group
+  config: {}
+  fields:
+  - name: team
+    type: include
+    config: {}
+    template: block-team
+    label: Team
+  label: Team
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: bottom
+    type: blocks
+    label: Bottom
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 3
+    description: Only <strong>A</strong>, <strong>B</strong>, <strong>C</strong> are
+      defined for this section
+  label: Hidden
+  description: Hidden blocks

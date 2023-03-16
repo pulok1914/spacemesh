@@ -1,0 +1,31 @@
+---
+label: 'Section: Community about'
+hide_body: true
+fields:
+- name: community
+  type: field_group
+  config: {}
+  fields:
+  - name: community
+    type: include
+    config: {}
+    template: block-community
+    label: Community
+  label: Community
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: main
+    type: blocks
+    label: Main
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 2
+    description: Only the <strong>A</strong> and <strong>B</strong> position are defined
+      for this section.
+  label: Hidden
+  description: Hidden blocks

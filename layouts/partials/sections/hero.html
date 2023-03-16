@@ -1,0 +1,11 @@
+<div class="home">
+    <section class="section hero large">
+        {{ partial "behind/behinds.html" .hidden.top }}
+        {{ partial "blocks/intro-home.html" (dict "ctx" . "data" .hero) }}
+        {{ partial "blocks/creators-autoplay.html" (dict "ctx" . "data" .creators) }}
+        {{ partial "blocks/update.html" (dict "ctx" . "data" .update) }}
+        {{ partial "blocks/discord.html" (dict "ctx" . "data" .discord) }}
+    </section>
+</div>
+
+

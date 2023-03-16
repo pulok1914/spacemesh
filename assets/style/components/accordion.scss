@@ -1,0 +1,26 @@
+// Default accordion structure (no styling)
+// this is used as base for the Accordion Class.
+// HTML Example:
+//
+// <ul class="accordion">
+//     <li class="item">
+//         <b class="header">Click Me</b>
+//         <p class="body">I open/close</p>
+//     </li>
+//     <li class="item">
+//         <b class="header">Click Me</b>
+//         <p class="body">I open/close</p>
+//     </li>
+// </ul>
+//
+
+.accordion {
+	.item {
+		.header {
+		}
+		.body {
+			transform-origin: top center;
+			will-change: opacity, height, transform;
+		}
+	}
+}

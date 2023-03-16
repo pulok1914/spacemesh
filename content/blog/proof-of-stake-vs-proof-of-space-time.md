@@ -1,0 +1,51 @@
++++
+aliases = []
+author = "Anton Lerner"
+categories = ["Technology"]
+cover = "/uploads/p2p-library_-second-image_2021-06-25.png"
+date = 2022-02-16T11:21:09Z
+tags = ["bitcoin", "ethereum", "proof of space time"]
+title = "Proof of Stake vs Proof of Space Time"
+description = ""
++++
+{{< rawhtml >}}
+
+<!-- HTML Meta Tags --> <title>Proof of Stake vs Proof of Space Time</title> <meta name="description" content="Bitcoin allowed people the freedom to have a monetary system that does not depend on a single decision-maker or centralized authority. But now, 13 years later, we see that, for all that it was and continues to be groundbreaking, Bitcoin still has some drawbacks. ">
+
+<!-- Facebook Meta Tags --> <meta property="og:url" content="https://www.spacemesh.io/blog/proof-of-stake-vs-proof-of-space-time/"> <meta property="og:type" content="website"> <meta property="og:title" content="Proof of Stake vs Proof of Space Time"> <meta property="og:description" content="Bitcoin allowed people the freedom to have a monetary system that does not depend on a single decision-maker or centralized authority. But now, 13 years later, we see that, for all that it was and continues to be groundbreaking, Bitcoin still has some drawbacks."> <meta property="og:image" content="https://spacemesh.io/uploads/p2p-library_-second-image_2021-06-25.png">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="spacemesh.io">
+<meta property="twitter:url" content="https://www.spacemesh.io/blog/proof-of-stake-vs-proof-of-space-time/">
+<meta name="twitter:title" content="Proof of Stake vs Proof of Space Time">
+<meta name="twitter:description" content="Bitcoin allowed people the freedom to have a monetary system that does not depend on a single decision-maker or centralized authority. But now, 13 years later, we see that, for all that it was and continues to be groundbreaking, Bitcoin still has some drawbacks.">
+<meta name="twitter:image" content="https://spacemesh.io/uploads/p2p-library_-second-image_2021-06-25.png">
+
+{{< /rawhtml >}}
+
+Bitcoin changed the world when first introduced in early 2009. It allowed people the freedom to have a monetary system that does not depend on a single decision-maker or centralized authority. But now, 13 years later, we see that, for all that it was and continues to be groundbreaking, Bitcoin still has some drawbacks. Powering the Bitcoin network recently reached 2% of the world's energy expenditure, with most hashing power mining bitcoin concentrated in China until the recently-implemented crackdown on crypto there. These days, home mining of bitcoin is almost eradicated. The apparent cost of monetary freedom.
+
+Unwilling to settle for these tradeoffs, the Ethereum ecosystem is now in the process of transitioning to another protocol: Proof of Stake. PoS was designed to be a sustainable alternative to PoW, allowing miners to join and participate in consensus without specialized hardware. Proof of stake consensus means that a miner must stake coins for the opportunity to validate transactions and submit them to the network. Instead of proving that “work” was put in to “mine” a block, a collateral is staked so that the miner has an incentive to follow the guidelines of the protocol. If a miner performs maliciously, its collateral will be taken in an action called “slashing”.
+
+One might ask why Spacemesh invented a new protocol if we already have an existing “green” protocol like Proof of stake. Well, the truth is, that while using Proof of stake solves the problem of excessive energy consumption, it also introduces a new set of problems to the blockchain world. As opposed to Proof of Work, where a physical trait—processing and attempts to solve a cryptographic puzzle, aka “work”---is needed to be eligible to participate in consensus and mine blocks, proof of stake does not have a direct link to anything physical. To participate in PoS you need coins to stake, this small difference shifts the power dynamics of blockchains to a different direction than what was envisioned first by Satoshi Nakamoto.
+
+Most blockchains are supported by a community of “miners”— a network of computers that share and store the transaction and data of the blockchain. Each miner supports the blockchain by storing a replica of the blockchain’s transactions and data, and also by extending the blockchain by introducing new blocks into it. Most blockchains are built to be “Decentralized”. That is, to ensure that decision-making power is not concentrated in among only a smalll number of decision makers. It is also generally “Permissionless”, meaning it has the ability to allow anyone to participate and mine the protocol without identification or permission from a centralized source.
+
+To mine using PoS a miner is required to stake a substantial amount of currency, this is needed to provide financial incentive to be an honest participant and follow the rules of the protocol, but this effectively removes home users as potential miners. In turn, this makes the network more reliant on “whale” nodes that slowly but steadily centralize the network. This also means that there can be only one type of miner on the network - a rich one. Moreover, there is a concern of powerful nodes gaining more and more power since staked currency produces more currency in form of block rewards and transaction fees and gas, only empowers the large stake holders allowing them to stake more and have even more power and control over the network.
+
+The total reliance solely on “stake” to participate in consensus contradicts the “permissionless” trait of blockchains. When using PoW, anyone can provide a PoW and try to produce a block into the blockchain. But in PoS, only miners in possession of the staked coin are eligible to participate. This creates the possibility of decentralization being compromised by a small number of miners who have staked the vast majority of coins, where this small minority gets to decide whether or not to distribute the coins to any other parties and thus control who is eligible to participate in the consensus. This effectively leads to a well-known but undesirable trait of “Money is Power”; those who have the stake, control the protocol. This is in contrast to PoW, where no monopoly can be gained over hashing power.
+
+PoW suffers from an issue of centralization: as more hashing power is required over time, mining becomes concentrated in a smaller and smaller number of farms with access to the necessary hashing power. However, because the PoW protocol is still based on a real physical resource—”work”—it will still remain permissionless in principle. With PoS, though, since the resource at play is the coins themselves, the issue becomes one of both decentralization and permissionlessness being compromised. The rules of PoS are totally reliant and controlled by holders of the protocol’s coins, which means that, as the protocol becomes more centralized, it also transitioned from a permissionless protocol to permissioned ones.
+
+![](/uploads/consensus-chart_2022-02-16.png)
+
+To address these new issues, the Spacemesh research team has invented a novel way to reach consensus. This method, called Proof of Space Time, relies on miners to stake storage they own for the eligibility to participate in Spacmesh mesh and validate transactions. In this process, a miner needs to initialize a minimum amount of storage with a special data structure. This data structure is then used to generate proofs that storage exists and is in fact being stored.
+
+The Spacemesh protocol is also “race-free”, since it is structured in a blockmesh as opposed to a traditional blockchain. Each layer in the mesh is composed of many blocks, which means that multiple miners can produce blocks in every layer. Whereas PoW and PoS protocols are both “winner-takes-all” systems, where only one miner can win the “race” or “lottery” to produce the next block and earn the rewards for doing so, miners in Spacemesh work together to create layers, validating and submitting transactions to the mesh. Therefore, each miner receives its proportional share of the rewards, based on how much storage it staked to the protocol relative to the total storage staked. Put another way: if a miner has staked 0.01% of the total storage space in the network, then it will receive 0.01% of the rewards for helping to produce a layer.
+
+PoST offers a sustainable and green alternative to PoW, while still attaching the protocol to real world physical scarce resource: storage. This trait allows Spacemesh to overcome the new issues that arise when using PoS. Using storage allows everyone to participate at any time without the need to accumulate stake from other participants of the protocol, as storage is widely available to everyone with a home PC. The ability of everyone to join at any time reduces the chances of collusion and censorship in the network substantially and also makes a fairer economy, where the coins are distributed not only to the larges mines, but to all participants.
+
+There is room for different kinds of blockchains to exist for different means and with different protocols, but what makes blockchains so much more than just a databases is the decentralization and the security that can be achieved by running it them a truly permissionless p2p network—one where everyone can join and help sustain the network. Blockchains are more than just a database because it has communities backing them and continuing their evolution. Sustainability issues can’t be ignored, but they shouldn’t diminish the value of the community and the permissionless trait of blockchains. On the contrary, we believe that blockchains should allow more participants to join the network, empowering its community as much as possible.
+
+This is the mission that Spacemesh hopes to achieve with Proof of Space-Time: a sustainable crypto platform that will forever allow anyone to mine from their home PCs.

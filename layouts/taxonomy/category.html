@@ -1,0 +1,63 @@
+{{ define "main" }}
+<main class="main blog">
+    <div class="blog">
+        <header>
+            {{ $about := .Site.GetPage "/blog" }}
+            {{ $page := .Page }}
+            <h4>{{ $about.Params.intro | safeHTML }}</h4>
+        </header>
+    </div>
+
+    <div class="blog">
+        <nav class="filter">
+            <a href="/blog/" class="pill"><span>All Posts</span></a>
+            <ul>
+                {{$categories:= ($.Site.GetPage "/blog").Params.categories_list}}
+                {{ range $categories }}
+                    {{$cat:= . | urlize}}
+                    {{with $cat}}
+                    {{$url:= . | urlize}}
+                    {{$page:= $.Site.GetPage (printf "/categories/%s" $url)}}
+        
+                    {{with $page}}
+                    <li><a href="{{.RelPermalink}}" class="pill"><span>{{ .Title }}</span></a></li>
+                    {{end}}
+                    {{end}}
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+
+    <div class="blog">
+        <section class="section posts"> 
+            {{ range .Paginator.Pages }}
+            {{ partial "blocks/blog-card.html" (dict "ctx" .) }}
+            {{ end }}
+        </section>
+    </div>
+
+    <div class="blog">
+        <nav class="pagination">
+            {{ with .Paginator }}
+                <div class="paginate">
+                    {{ with .Prev }}
+                    <a href="{{ .URL }}" aria-label="Previous" rel="prev" class="prev" aria-disabled="{{ not .HasPrev }}">
+                        {{ partial "svg/arrow.svg" }}
+                        <span class="adjust-baseline">Newer Posts</span>
+                    </a>
+                    {{ end }}
+                    {{ with .Next }}
+                    <a href="{{ .URL }}" aria-label="Next" rel="next" class="next" aria-disabled="{{ not .HasNext }}">
+                        <span class="adjust-baseline ">Older Posts</span>
+                        {{ partial "svg/arrow.svg" }}
+                    </a>
+                    {{ end }}
+                </div>
+                <div class="info">
+                    <span class="adjust-baseline">Page {{ .PageNumber }} of {{ .TotalPages }}</span>
+                </div>
+            {{ end }}
+        </nav>
+    </div>
+</main>
+{{ end }}

@@ -1,0 +1,9 @@
+{{ $type := "cryptoNews" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+</section>
+
+<section class="block__bottom" data-endpoint="{{ .data.endpoint }}">
+</section>
+{{ partial "blocks/_footer.html" . }}

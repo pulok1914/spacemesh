@@ -1,0 +1,93 @@
+Paginate = 9
+baseURL = "/"
+disableKinds = ["taxonomy", "RSS"]
+ignoreErrors = ["error-disable-taxonomy", "error-output-taxonomy"]
+languageCode = "en-us"
+title = "Spacemesh"
+[build]
+noJSConfigInAssets = true
+[[menu.external]]
+name = "Spacemesh Protocol Overview"
+url = "https://platform.spacemesh.io/"
+weight = 3
+[[menu.external]]
+name = "Spacemesh Product Plan"
+url = "https://product.spacemesh.io/"
+weight = 2
+[[menu.external]]
+name = "Testnet Resources"
+url = "https://testnet.spacemesh.io/"
+weight = 1
+[[menu.primary]]
+identifier = "updates"
+name = "Monthly Updates"
+url = "/updates"
+weight = 4
+[[menu.primary]]
+identifier = "resources"
+name = "FAQ & Info"
+url = "/resources"
+weight = 3
+[[menu.primary]]
+identifier = "careers"
+name = "Join The Team"
+url = "/Careers"
+weight = 5
+[[menu.primary]]
+name = "Get Started"
+url = "/start"
+weight = 1
+[[menu.primary]]
+name = "Blog"
+url = "/blog"
+weight = 2
+[[menu.primary]]
+name = "About"
+url = "/about"
+weight = 6
+[[menu.social]]
+name = "GitHub"
+url = "https://github.com/spacemeshos"
+weight = 5
+[[menu.social]]
+name = "Discord"
+url = "https://chat.spacemesh.io"
+weight = 4
+[[menu.social]]
+name = "Medium"
+url = "https://medium.com/spacemesh"
+weight = 3
+[[menu.social]]
+name = "YouTube"
+url = "https://www.youtube.com/channel/UCn-0T-qeP_SmKoiyvX49oVg"
+weight = 2
+[[menu.social]]
+name = "Twitter"
+url = "https://twitter.com/teamspacemesh"
+weight = 1
+[[menu.quick]]
+identifier = "careers"
+name = "Join The Team"
+url = "/Careers"
+weight = 5
+[[menu.quick]]
+name = "Get Started"
+url = "/start"
+weight = 1
+[[menu.quick]]
+name = "Blog"
+url = "/blog"
+weight = 2
+[permalinks]
+categories = "/blog/categories/:slug/"
+[related]
+includeNewer = true
+threshold = 80
+toLower = false
+[[related.indices]]
+name = "categories"
+weight = 100
+[taxonomies]
+category = "categories"
+[params]
+titleImage = "/images/social/cover-default.png"

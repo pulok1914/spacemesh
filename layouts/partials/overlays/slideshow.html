@@ -1,0 +1,37 @@
+<div class="slideshow" style="opacity: 0;">
+    <div class="close">
+        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#000"/><path d="M7 7l6 6M13 7l-6 6" stroke="#fff"/></svg>
+    </div>
+
+    <div class="slides">
+        {{ range .slides }}
+        <div class="slide">
+            <img src="{{ .image }}" {{ with .alt }}alt="{{ . }}"{{ end }}>
+        </div>
+        {{ end }}
+    </div>
+
+    <aside class="details">
+        <div class="content">
+            {{ range .slides }}
+            <div class="item">
+                <h3>{{ .title }}</h3>
+                <div class="body">
+                    {{ .body | safeHTML }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div style="position: relative; z-index: 10000;" class="nav">
+            <div class="pages side">02 / 04</div>
+            <div class="paginate side">
+                <div class="side prev">
+                    <img src="/images/arrows/arrow-overlay.svg" alt="prev">
+                </div>
+                <div class="side next">
+                    <img src="/images/arrows/arrow-overlay.svg" alt="next">
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>

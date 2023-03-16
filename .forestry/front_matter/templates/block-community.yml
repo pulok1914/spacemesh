@@ -1,0 +1,52 @@
+---
+label: 'Block: Community'
+hide_body: true
+fields:
+- name: id
+  type: text
+  config:
+    required: true
+  label: id
+  description: 'ID for block. This is used to link to scroll to the element using
+    #id.'
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+  description: Top left intro copy. Use &lt;span&gt;content&lt;/span&gt; to highlight
+    bold elements.
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+  description: Big headline element
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+  description: Main text, with support for limited HTML tags.
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: name
+  - name: link
+    type: text
+    config:
+      required: true
+    label: link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: links

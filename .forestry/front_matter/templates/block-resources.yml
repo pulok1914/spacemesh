@@ -1,0 +1,44 @@
+---
+label: 'Block: Other Resources'
+hide_body: true
+display_field: headline
+fields:
+- name: id
+  type: text
+  config:
+    required: true
+  label: Id
+  description: Used for internal linking.
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: resources
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+  - name: description
+    type: text
+    config:
+      required: true
+    label: Description
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Resources

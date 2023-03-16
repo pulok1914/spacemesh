@@ -1,0 +1,29 @@
+---
+label: 'Section: Hero Start'
+hide_body: true
+fields:
+- type: field_group
+  name: hero
+  label: Hero
+  fields:
+  - name: hero
+    type: include
+    config: {}
+    template: block-hero-get-started
+    label: hero
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: top
+    type: blocks
+    label: Top
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 1
+    description: This section only have the "A" position defined!
+  label: Hidden
+  description: Hidden blocks

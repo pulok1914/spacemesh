@@ -1,0 +1,17 @@
+{{ $type := "team" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+
+<ul>
+{{ range .data.people }}
+    <li>
+        <div class="name">{{ .name }}</div>
+        <div class="title">{{ .title }}</div>
+        <div class="social">
+            {{ with .website }}<a class="website" href="{{ . }}" target="_blank" rel="noopener noreferrer">Website</a>{{ end }}
+            {{ with .twitter }}<a class="twitter" href="{{ . }}" target="_blank" rel="noopener noreferrer">Twitter</a>{{ end }}
+        </div>
+    </li>
+{{ end }}
+</ul>
+
+{{ partial "blocks/_footer.html" . }}

@@ -1,0 +1,19 @@
+{{ $type := "communityLarge" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    <h2>{{ .data.headline | safeHTML }}</h2>
+</section>
+
+<section class="block__bottom">
+    <nav class="links links--white">
+        {{ range .data.links }}
+        <a href="{{ .link }}">
+            <span>{{ .name }}</span>
+            {{ partial "svg/arrow.svg" }}
+        </a>
+        {{ end }}
+    </nav>
+    <div class="body">{{ .data.body | safeHTML }}</div>
+</section>
+{{ partial "blocks/_footer.html" . }}

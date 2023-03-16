@@ -1,0 +1,34 @@
+{{ $type := "cover" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<canvas class="background"></canvas>
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    {{ with (eq .icon "about") }}
+    <div class="icon">{{ partial "svg/cover-icon-world.svg" }}</div>
+    {{ end }}
+    {{ with (eq .icon "careers") }}
+    <div class="icon">{{ partial "svg/cover-icon-careers.svg" }}</div>
+    {{ end }}
+    {{ with (eq .icon "resources") }}
+    <div class="icon">{{ partial "svg/cover-icon-resources.svg" }}</div>
+    {{ end }}
+    {{ with (eq .icon "updates") }}
+    <div class="icon">{{ partial "svg/cover-icon-updates.svg" }}</div>
+    {{ end }}
+    <h1>{{ .data.headline | safeHTML }}</h1>
+</section>
+
+<section class="block__bottom">
+    <div class="body">
+        <p>{{ .data.body | safeHTML }}</p>
+    </div>
+    <nav class="links">
+        {{ range .data.links }}
+        <a href="{{ .link }}" {{ with .newTab }}target="_blank" rel="noopener noreferrer"{{end}}>
+            <span>{{ .name }}</span>
+            {{ partial "svg/arrow.svg" }}
+        </a>
+        {{ end }}
+    </nav>
+</section>
+{{ partial "blocks/_footer.html" . }}

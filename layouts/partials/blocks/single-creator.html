@@ -1,0 +1,25 @@
+{{ $type := "singleCreator" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+{{ $intro := .data.intro }}
+{{ with site.GetPage .data.creator }}
+<section class="block__top">
+    <p class="intro">{{ $intro | safeHTML }}</p>
+    <h3>{{ .Params.firstname }}{{ with .Params.lastname }} {{.}}{{end}}</h3>
+</section>
+
+<div 
+    class="creator"
+    style="background-image: url('{{ .Params.thumbnail }}')" 
+    data-name="{{ .Params.firstname }} {{ .Params.lastname }}"
+    data-video="{{ .Params.video }}"
+    data-id="{{ .Params.vimeo_id }}"
+    data-subtitle="{{ .Params.subtitle }}"
+></div>
+
+<section class="block__bottom">
+    <div class="play">
+        <div class="icon"></div>
+    </div>
+</section>
+{{ end }}
+{{ partial "blocks/_footer.html" . }}

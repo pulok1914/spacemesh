@@ -1,0 +1,14 @@
+{
+    "glossary": [
+        {{- range $i, $e := .Pages -}}
+        {{- if $i -}}, {{- end -}}
+        {
+            "id": "{{- urlize .Params.term -}}",
+            {{- with .Params.custom_id -}}"custom_id": "{{ . }}",{{- end -}}
+            {{- with .Params.hide_button -}}"hide_button": true,{{- end -}}
+            "term": "{{- .Params.term -}}",
+            "content": {{- .Content | safeHTML | jsonify -}}
+        }
+        {{- end -}}
+    ]
+}

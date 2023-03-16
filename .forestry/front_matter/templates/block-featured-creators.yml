@@ -1,0 +1,21 @@
+---
+label: 'Block: Featured Creators'
+hide_body: true
+display_field: intro
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: featured
+  type: list
+  config:
+    use_select: true
+    min: 2
+    max: 6
+    source:
+      type: pages
+      section: creators
+  label: Featured
+  description: List of featured creators.

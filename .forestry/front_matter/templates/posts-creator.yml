@@ -1,0 +1,72 @@
+---
+label: 'Posts: Creator'
+hide_body: true
+fields:
+- type: text
+  name: firstname
+  label: First Name
+  config:
+    required: true
+- type: text
+  name: lastname
+  label: Last Name
+  config:
+    required: false
+- type: file
+  name: thumbnail
+  label: Thumbnail
+  description: Video Thumbnail
+- type: text
+  name: video
+  label: Video MP4 Link
+  description: Direct URL to video file. Get this from Vimeo; <strong>Standard def
+    (mp4, 512x360)</strong> in black and white is recommended.
+  config:
+    required: true
+- name: subtitle
+  type: text
+  config:
+    required: false
+  label: Video Subtitle URL
+  description: Link to the subtitle file. You can upload <strong>vtt</strong> files
+    in "media". It's recommended you name the file the same as the creator e.g<em>
+    /uplaods/axo-sal.vtt</em>
+- name: vimeo_id
+  type: text
+  config:
+    required: true
+  label: Vimeo Video ID
+  description: ID of the vimeo upload. This is used to fetch subtitles and thumbnails
+    for the video.
+- type: boolean
+  name: quotes
+  label: Feature in Quotes Block
+  description: Feature this creator in the Quotes block on the homepage.
+- type: textarea
+  name: description
+  label: Details
+  config:
+    required: false
+  default: ''
+  showOnly:
+    field: quotes
+    value: true
+  description: Details copy shown under the quote.
+- type: textarea
+  name: quote
+  label: Quote
+  description: Quote that is featured in the large creator block.
+  showOnly:
+    field: quotes
+    value: true
+pages:
+- content/creators/Andrew-twitter.md
+- content/creators/Celebrating-10k.md
+- content/creators/IS COMING.md
+- content/creators/Spacemesh 3D.md
+- content/creators/Spacemesh Flag.md
+- content/creators/axo-sal.md
+- content/creators/elf.md
+- content/creators/pattarapol.md
+- content/creators/protocol-intro.md
+- content/creators/tenk.md

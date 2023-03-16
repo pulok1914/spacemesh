@@ -1,0 +1,47 @@
+---
+label: 'Block: Hero Home'
+hide_body: true
+display_field: headline
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+- name: btn_download_title
+  type: text
+  config:
+    required: true
+  label: Download Copy
+  description: Copy showed on the download button
+- name: btn_download_link
+  type: text
+  config:
+    required: true
+  label: Download Link
+  description: Download button link
+- name: btn_more_title
+  type: text
+  config:
+    required: true
+  label: More Copy
+- name: btn_more_link
+  type: text
+  config:
+    required: true
+  label: More Link
+  description: Link to read more.

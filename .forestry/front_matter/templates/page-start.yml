@@ -1,0 +1,21 @@
+---
+label: 'Page: Start'
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: type
+  label: Type
+  hidden: true
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-hero-start
+  - section-hardware-start
+  - section-community-start
+pages:
+- content/start/index.md

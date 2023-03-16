@@ -1,0 +1,50 @@
+---
+label: 'Block: Team'
+hide_body: true
+fields:
+- name: id
+  type: text
+  config:
+    required: false
+  label: id
+  description: Page unique identifier
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: people
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: website
+    type: text
+    config:
+      required: false
+    label: Website
+    description: Full valid URL is required https://example.com
+  - name: twitter
+    type: text
+    config:
+      required: false
+    label: Twitter
+    description: Full link required
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: People

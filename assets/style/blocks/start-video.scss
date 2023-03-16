@@ -1,0 +1,35 @@
+[data-block='startVideo'] {
+	background-color: var(--color-gray-light);
+	text-transform: none;
+	color: var(--color-white);
+	position: relative;
+	cursor: pointer;
+
+	.block__top {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2em;
+		.logo {
+			max-height: 260px;
+		}
+	}
+
+	a {
+		color: var(--color-accent);
+	}
+
+	.block__bottom {
+		h3 {
+			max-width: 460px;
+			font-size: 1rem;
+			font-weight: 800;
+			text-transform: uppercase;
+			margin-bottom: 1.25em;
+		}
+
+		.body {
+			max-width: 460px;
+			color: var(--color-gray);
+		}
+	}
+}

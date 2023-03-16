@@ -1,0 +1,63 @@
+.newsletter-subscribe {
+	--height: 30px;
+	display: flex;
+	padding-bottom: 23px;
+	border-bottom: 1px solid var(--color-white-20);
+	width: 100%;
+
+	@media (min-width: $break-laptop) {
+		--height: 100px;
+		margin-left: 20px;
+	}
+
+	.button {
+		font-size: 0.8125rem;
+
+		@media (min-width: $break-laptop-l) {
+			min-width: 224px;
+		}
+
+		.label {
+			margin: 0.6em;
+			@media (min-width: $break-tablet) {
+				margin: 2em;
+			}
+		}
+		.icon {
+			display: none;
+			@media (min-width: $break-tablet) {
+				display: block;
+			}
+		}
+	}
+
+	input.email {
+		border: none;
+		outline: none;
+		appearance: none;
+		margin-right: var(--site-grid-gap);
+		flex-grow: 1;
+		background: transparent;
+
+		font-weight: 800;
+		font-family: 'univers lt std';
+		font-size: 1rem;
+		color: var(--color-white);
+		width: 90%;
+		padding-top: 0.5em; // adjust baseline
+
+		@media (min-width: $break-laptop) {
+			font-size: 1.8rem;
+		}
+	}
+
+	input::placeholder {
+		opacity: 0.2;
+		color: var(--color-white);
+	}
+
+	input::selection {
+		color: var(--color-black);
+		background-color: var(--color-accent);
+	}
+}

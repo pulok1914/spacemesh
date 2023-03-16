@@ -1,0 +1,11 @@
+---
+label: 'Posts: FAQ'
+hide_body: false
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: 'Q: The question'

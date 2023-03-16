@@ -1,0 +1,36 @@
+---
+label: 'Block: Subtitle'
+hide_body: true
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: links
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+  - name: link
+    type: text
+    config:
+      required: true
+    label: Link
+  - name: newtab
+    type: boolean
+    label: Open in New Tab
+    description: Should the link open in a new tab/window?
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Links

@@ -1,0 +1,28 @@
+---
+label: 'Section: Hero Resources'
+hide_body: true
+fields:
+- type: field_group
+  name: intro
+  label: Intro
+  fields:
+  - name: intro
+    type: include
+    config: {}
+    template: block-cover
+    label: Intro
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: top
+    type: blocks
+    label: Top
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 1
+    description: Only <strong>A</strong> position supported
+  label: Hidden

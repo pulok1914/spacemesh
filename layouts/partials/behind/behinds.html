@@ -1,0 +1,10 @@
+{{ range . }}
+{{ if .enabled }}
+    {{ if eq .type "coin" }}
+        {{ partial "behind/reward-coin.html" (dict "data" . ) }}
+    {{ end }}
+    {{ if eq .type "generic" }}
+        {{ partial "behind/generic.html" (dict "data" . ) }}
+    {{ end }}
+{{ end }}
+{{ end }}

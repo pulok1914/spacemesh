@@ -1,0 +1,27 @@
+.bouncing-coin {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 30;
+	will-change: transform;
+	z-index: -1;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+
+	.inner {
+		will-change: transform;
+		background-image: url('/images/coin/coin-small-black.svg');
+		background-size: contain;
+		width: 150px;
+		height: 150px;
+	}
+
+	@media (min-width: $break-laptop) {
+		.inner {
+			background-image: url('/images/coin/coin-large-black.svg');
+			background-size: contain;
+			width: 211px;
+			height: 211px;
+		}
+	}
+}

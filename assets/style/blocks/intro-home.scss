@@ -1,0 +1,83 @@
+[data-block='introHome'] {
+	position: relative;
+	user-select: none;
+	background: var(--color-smoke-light);
+
+	h1 {
+		margin-bottom: 0.75em;
+		max-width: 400px;
+		pointer-events: none;
+
+		@media (min-width: $break-tablet) {
+			max-width: 500px;
+		}
+
+		@media (min-width: $break-laptop) {
+			margin-top: 6.25rem;
+		}
+	}
+
+	.body {
+		max-width: 270px;
+	}
+
+	.cta {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin-top: 2.25em;
+
+		@media (min-width: $break-tablet) {
+			flex-direction: row;
+			margin-top: 4em;
+		}
+
+		// Optional non-default break-point tweaking.
+		@media (min-width: 530px) {
+			flex-direction: row;
+			.button {
+				flex-grow: 1;
+				max-width: calc(50% - 10px);
+			}
+		}
+
+		.button {
+			font-size: 0.7rem;
+			height: 55px;
+			cursor: pointer;
+			color: var(--color-black);
+
+			svg path {
+				fill: var(--color-black);
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			@media (min-width: $break-tablet) {
+				font-size: 1rem;
+				height: auto;
+				flex-grow: 1;
+				max-width: calc(50% - 10px);
+				&:not(:last-child) {
+					margin-bottom: 0;
+				}
+			}
+
+			@media (min-width: $break-laptop) {
+				font-size: 0.9rem;
+				&:first-child {
+					margin-right: 5px;
+				}
+			}
+
+			@media (min-width: $break-laptop-l) {
+				font-size: 1rem;
+				&:first-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="main">
+{{ range .Params.page_sections }}
+    {{ if eq "section-hero-start" .template }}
+      {{ partial "sections/hero-start.html" . }}
+    {{ end }}
+    {{ if eq "section-hardware-start" .template }}
+        {{ partial "sections/hardware-start.html" . }}
+    {{ end }}
+    {{ if eq "section-community-start" .template }}
+        {{ partial "sections/community-start.html" . }}
+    {{ end }}
+{{ end }}
+</main>
+{{ end }}

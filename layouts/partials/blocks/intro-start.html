@@ -1,0 +1,61 @@
+{{ $type := "introStart" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+{{ partial "overlays/slideshow.html" (dict "ctx" . "slides" .data.slides) }}
+<canvas class="background"></canvas>
+<section class="block__top">
+    <div class="left">
+        <p class="intro">{{ .data.intro | safeHTML }}</p>
+        <h1>{{ .data.headline | safeHTML }}</h1>
+        <p class="body">{{ .data.body | safeHTML }}</p>
+    </div>
+    <div class="right">
+        <a class="shortcut preview" href="#">
+            <img src="/images/icons/shortcut-preview.svg" alt="Slideshow of screenshots">
+            <span class="adjust-baseline">Preview</span>
+        </a>
+    </div>
+</section>
+
+<div class="coin bouncing-coin">
+    <div class="inner"></div>
+</div>
+
+<section class="block__bottom">
+    <div class="cta">
+        
+        <div id="downloadBtnDesktop" class="download-cta">
+            <div class="label adjust-baseline">
+                <a href="#" class="available" download>{{ .data.button }}</a>
+                <ul class="systems">
+                    {{ range .data.downloads }}
+                    <li><a href="{{ .url }}" data-os="{{ .os | urlize }}" download class="direct-link">{{ .os }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="spacer"></div>
+            <img class="icon" src="/images/arrows/arrow-download-bg.svg" alt="download button icon">
+        </div>
+        <a id="downloadBtnMobile" href="#term:download" class="download-cta">
+            <div class="label adjust-baseline">
+                <p class="available">{{ .data.button }}</p>
+                <ul class="systems">
+                    {{ range .data.downloads }}
+                    <li><span data-os="{{ .os | urlize }}" class="direct-link">{{ .os }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            <div class="spacer"></div>
+            <img class="icon" src="/images/arrows/arrow-download-bg.svg" alt="download button icon">
+        </a>
+
+    </div>
+    <nav class="links">
+        {{ range .data.links }}
+        <a href="{{ .link }}" {{if .newtab}}target="_blank" rel="noopener noreferrer"{{end}}>
+            <span>{{ .name }}</span>
+            {{ partial "svg/arrow.svg" }}
+        </a>
+        {{ end }}
+    </nav>
+</section>
+{{ partial "blocks/_footer.html" . }}

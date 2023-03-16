@@ -1,0 +1,16 @@
+{{define "main"}}
+<main class="main">
+  {{ range .Params.page_sections }}
+    {{ if eq "section-top-nav" .template }}
+      {{ partial "sections/top-nav.html" . }}
+    {{ end }}
+    {{ if eq "section-hero-events" .template }}
+      {{ partial "sections/hero-events.html" . }}
+    {{ end }}
+    {{ if eq "section-faq-events" .template }}
+      {{ partial "sections/faq-events.html" . }}
+    {{ end }}
+  {{ end }}
+</main>
+
+{{end}}

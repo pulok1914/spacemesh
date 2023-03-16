@@ -1,0 +1,47 @@
+[data-block='cryptoNews'] {
+	background-color: var(--color-smoke-light);
+
+	.block__bottom {
+		margin: 0;
+		margin-top: 5rem;
+
+		a {
+			display: flex;
+			align-items: flex-start;
+			border-top: 1px solid var(--color-black);
+			padding: var(--padding);
+			color: var(--color-black);
+			transition: background-color 270ms;
+
+			&:hover {
+				background-color: var(--color-white);
+			}
+
+			.time {
+				width: 70px;
+				margin-right: 2em;
+				font-size: 0.8125rem;
+				font-weight: 200;
+				flex-grow: 0;
+				flex-shrink: 0;
+			}
+			h5 {
+				text-transform: uppercase;
+				padding: 0 0.5em;
+				flex-grow: 1;
+			}
+			.tags {
+				display: flex;
+				font-weight: 600;
+				font-size: 0.8125rem;
+				max-width: 200px;
+				width: 120px;
+				justify-content: flex-end;
+				flex-wrap: wrap;
+				li:not(:first-of-type) {
+					padding-left: 0.8em;
+				}
+			}
+		}
+	}
+}

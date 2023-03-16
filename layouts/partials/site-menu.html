@@ -1,0 +1,65 @@
+{{ $current := . }}
+<nav class="menu">
+    <section class="menu__quick">
+        <a href="/" title="{{ .Site.Title }}" class="logo">
+            <img src="/images/logo.svg" width="16" height="32" alt="Spacemesh logo">
+        </a>
+        <ul class="nav">
+            {{ range .Site.Menus.quick }}
+            {{ $active := in $current.RelPermalink .URL }}
+            <li>
+                <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}" data-menu-id="{{ .Identifier }}">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        <a class="toggle" href="#">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </a>
+    </section>
+
+    <section class="menu__primary">
+        <ul class="nav">
+            {{ range .Site.Menus.primary }}
+            {{ $active := in $current.RelPermalink .URL }}
+            <li>
+                <a href="{{ .URL }}" class="{{ if $active }}active{{ end }}" data-menu-id="{{ .Identifier }}">
+                    {{ .Pre }}
+                    <span class="title">{{ .Name }}</span>
+                    <img class="arrow" src="/images/arrows/arrow-menu-accent.svg" alt="" width="39" height="35">
+                </a>
+                <div class="split"></div>
+            </li>
+            {{ end }}
+        </ul>
+        <div class="secondary">
+            <ul class="external">
+                {{ range .Site.Menus.external }}
+                <li>
+                    <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+            <ul class="social">
+                {{ range .Site.Menus.social }}
+                <li>
+                    <a href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+                        <span>{{ .Name }}</span>
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="newsletter">
+            <p>{{ .Site.Data.globals.newsletter }}</p>
+            {{ partial "newsletter" (dict "ctx" . )}}
+        </div>
+    </section>
+</nav>
+<div id="menu-close-pixel"></div>

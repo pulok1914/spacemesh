@@ -1,0 +1,25 @@
+---
+label: 'Page: Blog Landing'
+hide_body: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+  description: Intro copy at the top of the page. Use &lt;span&gt;content&lt;/span&gt;
+    elements to mark it as bold.
+- name: categories_list
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Categories
+  description: List of categories that blog posts can be tagged with.
+pages:
+- content/blog/_index.md

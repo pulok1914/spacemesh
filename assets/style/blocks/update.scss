@@ -1,0 +1,43 @@
+[data-block='update'] {
+	background: var(--color-smoke-light);
+
+	.date {
+		margin-bottom: 1.25em;
+	}
+
+	&:hover {
+		background-color: var(--color-accent);
+		.join {
+			span {
+				transform: translateX(10px);
+			}
+		}
+	}
+
+	a {
+		color: var(--color-black);
+	}
+
+	h4 {
+		font-size: 1rem;
+		font-weight: 800;
+	}
+
+	svg.arrow path {
+		fill: var(--color-black);
+	}
+
+	.join {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+		margin-top: 1.5625rem;
+		span {
+			will-change: transform;
+			transition: transform 0.4s var(--ease-out-cubic);
+			position: relative;
+			top: 0.2em;
+		}
+	}
+}

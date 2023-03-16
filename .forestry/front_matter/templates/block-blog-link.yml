@@ -1,0 +1,10 @@
+---
+label: 'Block: Blog Link'
+hide_body: true
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+  description: Intro copy.

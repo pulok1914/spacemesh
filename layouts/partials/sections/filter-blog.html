@@ -1,0 +1,19 @@
+<div class="blog">
+    <nav class="filter">
+        <a href="/blog/" class="pill fill"><span>All Posts</span></a>
+        <ul>
+        {{$categories:= .categories_list}}
+        {{ range $categories }}
+            {{$cat:= . | urlize}}
+            {{with $cat}}
+            {{$url:= . | urlize}}
+            {{$page:= site.GetPage (printf "/categories/%s" $url)}}
+    
+            {{with $page}}
+            <li><a href="{{.RelPermalink}}" class="pill"><span>{{ .Title }}</span></a></li>
+            {{end}}
+            {{end}}
+        {{ end }}
+        </ul>
+    </nav>
+</div>

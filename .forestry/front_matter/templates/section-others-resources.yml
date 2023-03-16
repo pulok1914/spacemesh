@@ -1,0 +1,38 @@
+---
+label: 'Section: Others Resources'
+hide_body: true
+fields:
+- type: field_group
+  name: glossary
+  label: Glossary
+  fields:
+  - name: glossary
+    type: include
+    config: {}
+    template: block-glossary
+    label: Glossary
+  description: To add/remove items go to Glossary in the sidebar
+- type: field_group
+  name: other
+  label: Other
+  fields:
+  - name: resources
+    type: include
+    config: {}
+    template: block-resources
+    label: Resources
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: bottom
+    type: blocks
+    label: Bottom
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 2
+    description: Only <strong>A </strong>and<strong> B</strong> position supported
+  label: Hidden

@@ -1,0 +1,68 @@
+.container {
+	max-width: var(--site-max-width);
+	margin: 0 auto;
+	position: relative;
+	padding-top: var(--site-menu-height);
+}
+
+main.main {
+	position: relative;
+	min-height: 100%;
+	z-index: 1; // stay on top of footer
+
+	.section {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: var(--site-grid-gap) var(--site-grid-gap);
+
+		.block.hero {
+			grid-area: 1 / 1 / span 1 / span 1;
+
+			@media (min-width: $break-tablet) {
+				grid-area: 1 / 1 / span 1 / span 2;
+			}
+
+			@media (min-width: $break-laptop) {
+				grid-area: 1 / 1 / span 1 / span 4;
+			}
+		}
+
+		@media (min-width: $break-tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (min-width: $break-laptop) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+	>.pd-btm:not(:last-child) {
+		padding-bottom: var(--site-section-spacing);
+	}
+
+	.section.hero.large {
+		// Height is important here
+		@media (min-height: 800px) and (min-width: $break-laptop-l) {
+			height: calc(100vh - var(--site-menu-height));
+			min-height: max-content;
+			max-height: 950px;
+
+			padding-bottom: 10px;
+			margin-bottom: calc(var(--site-section-spacing) - 10px);
+		}
+	}
+}
+
+.overlays {
+	z-index: 99999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	& > * {
+		pointer-events: auto;
+	}
+}

@@ -1,0 +1,24 @@
+{{ $type := "discord" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+
+    <section class="block__top">
+        <p class="intro">{{ .data.intro | safeHTML }}</p>
+    </section>
+
+    <a href="{{ .data.link }}" target="_blank" rel="noopener noreferrer" title="Join Discord">
+        <section class="block__bottom">
+            <div class="coin">
+
+            <div class="circle">
+                <img src="/images/discord-frog.svg" alt="" class="frog">
+                <img src="/images/discord-text.svg" alt="" class="text">
+            </div>
+
+            </div>
+            <div class="join">
+                <span>{{ .data.cta }}</span>
+                {{ partial "svg/arrow.svg" }}
+            </div>
+        </section>
+    </a>
+{{ partial "blocks/_footer.html" . }}

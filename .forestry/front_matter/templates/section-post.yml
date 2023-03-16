@@ -1,0 +1,12 @@
+---
+label: 'Section: Post'
+hide_body: false
+fields:
+- type: textarea
+  name: content
+  label: Content
+  description: Please write down content in markdown format.
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown

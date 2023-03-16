@@ -1,0 +1,14 @@
+<div class="home pd-btm">
+    <section class="section community">
+        {{ partial "behind/behinds.html" .hidden.main }}
+        {{ partial "blocks/breaker.html" (dict "ctx" . "data" .breaker "icon" "star") }}
+        {{ partial "blocks/creators-large.html" (dict "ctx" . "data" .cases) }}
+        {{ partial "blocks/subtitle.html" (dict "ctx" . "data" .subtitle "icon" "globe") }}
+        {{ partial "blocks/connect.html" (dict "ctx" . "data" .connect) }}
+        {{ partial "blocks/repos.html" (dict "ctx" . "data" .repos) }}
+        {{ partial "blocks/single-creator.html" (dict "ctx" . "data" .creator) }}
+        {{ partial "blocks/blog-link.html" (dict "ctx" . "data" .blogLink) }}
+        {{ partial "blocks/blog-post.html" (dict "ctx" . "offset" 0 "classes" (slice "left")) }}
+        {{ partial "blocks/blog-post.html" (dict "ctx" . "offset" 1 "classes" (slice "right")) }}
+    </section>
+</div>

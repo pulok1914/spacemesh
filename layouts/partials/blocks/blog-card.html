@@ -1,0 +1,19 @@
+{{ $type := "blogCard" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+{{ with .ctx}}
+<a href="{{ .RelPermalink }}">
+
+    <section class="cover">
+        <img data-src="{{ .Params.cover }}" class="lazyload">
+    </section>
+
+    <div class="bottom">
+        <h2>{{ .Title }}</h2>
+        <div class="footer">
+            <span class="adjust-baseline date">{{.Date.Format "01.02.2006"}}</span>
+            {{ partial "svg/arrow.svg" }}
+        </div>
+    </div>
+</a>
+{{ end }}
+{{ partial "blocks/_footer.html" . }}

@@ -1,0 +1,21 @@
+---
+label: 'Block: Start Link'
+hide_body: true
+display_field: headline
+fields:
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: link
+  type: text
+  config:
+    required: true
+  label: Link
+  description: URL to trigger when clicking the item
+- name: disabled
+  type: boolean
+  label: Disabled
+  default: false
+  description: Should the box be faded and disabled?

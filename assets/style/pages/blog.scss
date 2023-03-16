@@ -1,0 +1,122 @@
+main.blog {
+	header {
+		margin-bottom: 40px;
+		margin-top: 25px;
+
+		@media (min-width: $break-tablet) {
+			margin-bottom: 90px;
+		}
+
+		h4 {
+			max-width: 280px;
+			color: var(--color-white);
+			font-weight: 200;
+			font-size: 0.8125rem;
+			text-transform: uppercase;
+			span {
+				font-weight: bold;
+				color: var(--color-white);
+			}
+		}
+	}
+
+	.filter {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 25px;
+		font-size: 0.6rem;
+		flex-direction: column;
+
+		@media (min-width: $break-tablet) {
+			font-size: 0.8rem;
+			flex-direction: row;
+		}
+
+		@media (min-width: $break-laptop) {
+			font-size: 1rem;
+		}
+
+		a {
+			color: var(--color-white);
+			margin-bottom: 10px;
+
+			@media (min-width: $break-tablet) {
+				margin-bottom: 0;
+			}
+		}
+
+		ul {
+			display: flex;
+			width: 100%;
+			overflow-x: auto;
+			user-select: none;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			-ms-overflow-style: none; /* IE and Edge */
+			scrollbar-width: none;
+
+			li:not(:last-child) {
+				margin-right: 9px;
+			}
+
+			@media (min-width: $break-tablet) {
+				width: auto;
+			}
+		}
+	}
+
+	.section {
+		grid-gap: 20px 20px;
+		grid-template-columns: 1fr;
+
+		@media (min-width: $break-tablet) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (min-width: $break-laptop) {
+			grid-gap: 40px 40px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	.section.posts {
+		padding-bottom: 60px;
+	}
+
+	.pagination {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-transform: uppercase;
+		color: var(--color-white);
+
+		.paginate {
+			flex-direction: row;
+			display: flex;
+
+			a {
+				display: flex;
+				align-items: center;
+				color: var(--color-accent);
+				svg path {
+					stroke: var(--color-accent);
+				}
+			}
+			a.next {
+				svg {
+					margin-left: 12px;
+				}
+			}
+			a.prev {
+				margin-right: 20px;
+				svg {
+					transform: rotate(180deg);
+					margin-right: 12px;
+				}
+			}
+		}
+	}
+}

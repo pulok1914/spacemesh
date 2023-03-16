@@ -1,0 +1,25 @@
+{{ $type := "glossary" }}
+{{ $glossary := site.GetPage "/resources/glossary" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    <h2>{{ .data.headline | safeHTML }}</h2>
+</section>
+<section class="block__bottom">
+    <div class="terms">
+        {{ range $glossary.Pages.ByParam "order" }}
+            {{ if not .Params.hidden }}
+                {{ if .Params.custom_id }}
+                    <a id="term-{{ urlize .Params.custom_id }}" class="term {{ urlize .Params.custom_id }}" href="#term:{{ urlize .Params.custom_id }}">
+                        <span class="adjust-baseline">{{ humanize .Params.term }}</span>
+                    </a>
+                {{ else }}
+                    <a id="term-{{ urlize .Params.term }}" class="term {{ urlize .Params.term }}" href="#term:{{ urlize .Params.term }}">
+                        <span class="adjust-baseline">{{ humanize .Params.term }}</span>
+                    </a>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ partial "blocks/_footer.html" . }}

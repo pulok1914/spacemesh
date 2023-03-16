@@ -1,0 +1,15 @@
+---
+label: 'Block: Crypto News'
+hide_body: true
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: endpoint
+  type: text
+  default: https://zen-elion-aba44c.netlify.app/.netlify/functions/news
+  config:
+    required: true
+  label: Endpoint

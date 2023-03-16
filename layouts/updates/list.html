@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main class="main">
+  {{ range .Params.page_sections }}
+    {{ if eq "section-hero-updates" .template }}
+      {{ partial "sections/hero-updates.html" . }}
+    {{ end }}
+    {{ if eq "section-update-updates" .template }}
+        {{ partial "sections/update-updates.html" $ }}
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}

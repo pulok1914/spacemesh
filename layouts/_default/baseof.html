@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}">
+<head>
+    <title>{{ .Title | default .Site.Title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="{{ .Site.Params.name }}">
+    <meta name="description" content="{{ .Site.Data.globals.name }}">
+
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="{{ .Site.Data.globals.canonical_domain }}{{.RelPermalink}}" />
+    <meta property="og:site_name" content="{{ .Site.Params.name }}" />
+    {{ block "description" . }}
+      <meta property="og:description" content="{{ .Site.Data.globals.description }}" />
+      <meta name="twitter:description" content="{{ .Site.Data.globals.description }}" />
+    {{ end }}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{.Title}}" />
+    {{ block "cover" . }}
+      <meta property="og:image" content="{{ .Params.titleImage | default site.Params.titleImage}}" />
+      <meta name="twitter:image" content="{{ .Params.titleImage | default site.Params.titleImage}}" />   
+      <meta name="twitter:image:alt" content="{{ .Title }}" />
+    {{ end }}
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    {{ partial "site-analytics.html" . }}
+    {{ partial "site-style.html" . }}
+    {{ partial "site-fonts.html" . }}
+</head>
+    <body>
+        <div class="app-wrapper">
+            <div class="app container">
+                <!-- <div class="container__inner"> -->
+                    {{ partial "site-menu.html" . }}
+
+                    {{ block "header" . }}
+                        <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+                    {{ end }}
+
+                    {{ block "main" . }}
+                        <!-- The part of the page that begins to differ between templates -->
+                    {{ end }}
+
+                    {{ block "footer" . }}
+                        <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+                    {{ end }}
+
+                    {{ partial "site-footer.html" . }}
+
+                    {{ partial "site-javascript.html" . }}
+                <!-- </div> -->
+                <div class="overlays"></div>
+            </div>
+        </div>
+    </body>
+</html>

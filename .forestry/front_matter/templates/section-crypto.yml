@@ -1,0 +1,38 @@
+---
+label: 'Section: Crypto'
+hide_body: true
+display_field: testnet
+fields:
+- name: hidden
+  type: field_group
+  config: {}
+  fields:
+  - name: bottom
+    type: blocks
+    label: Bottom
+    template_types:
+    - hidden-generic
+    - hidden-coin
+    config:
+      min: 0
+      max: 2
+  label: Hidden
+  description: Configure hidden blocks on the page.
+- type: field_group
+  name: testnet
+  label: Testnet
+  fields:
+  - name: testnet
+    type: include
+    config: {}
+    template: block-testnet-stats
+    label: Testnet
+- type: field_group
+  name: news
+  label: Crypto News
+  fields:
+  - name: crypto_news
+    type: include
+    config: {}
+    template: block-crypto-news
+    label: Crypto News

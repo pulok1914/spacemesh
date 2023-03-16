@@ -1,0 +1,23 @@
+---
+label: 'Page: Weekly Updates'
+hide_body: true
+display_field: title
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Page title
+- type: text
+  name: type
+  label: Type
+  hidden: true
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-hero-updates
+  - section-update-updates
+pages:
+- content/updates/_index.md

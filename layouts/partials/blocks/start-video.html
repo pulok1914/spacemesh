@@ -1,0 +1,15 @@
+{{ $type := "startVideo" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <img src="/images/logo-rotating.gif" class="logo" alt="rotating logo">
+</section>
+
+<div class="play cursor">
+    <div class="icon play"></div>
+</div>
+
+<section class="block__bottom" data-video="{{ .data.video }}" data-id="{{ .data.vimeo_id }}">
+    <h3>{{ .data.headline | safeHTML }}</h2>
+    <div class="body">{{ .data.body | safeHTML }}</div>
+</section>
+{{ partial "blocks/_footer.html" . }}

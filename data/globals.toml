@@ -1,0 +1,6 @@
+canonical_domain = "https://spacemesh.io"
+description = "Spacemesh is a community of builders, thinkers and artists working towards a better tomorrow."
+name = "Spacemesh"
+newsletter = "Sign up and get the latest news from the Spacemesh team"
+[share_image]
+url = "/uploads/share-image.jpg"

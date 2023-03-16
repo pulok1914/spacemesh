@@ -1,0 +1,5 @@
+{{ $styleOptions := (dict "enableSourceMap" true "precision" 6) }}
+{{ $style := resources.Get "style/main.scss" | toCSS | minify | fingerprint }}
+{{ with $style }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" >
+{{ end }}

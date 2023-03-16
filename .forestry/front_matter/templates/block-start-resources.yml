@@ -1,0 +1,62 @@
+---
+label: 'Block: Start Resources'
+hide_body: true
+display_field: headline
+fields:
+- name: intro
+  type: text
+  config:
+    required: true
+  label: Intro
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+- name: left
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+  label: Left
+- name: right
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+  label: Right

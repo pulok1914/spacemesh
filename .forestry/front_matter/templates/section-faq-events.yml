@@ -1,0 +1,14 @@
+---
+label: 'Section: FAQ Events'
+hide_body: true
+fields:
+- type: field_group
+  name: faq
+  label: faq
+  fields:
+  - type: text
+    name: id
+    label: id
+  - type: textarea
+    name: intro
+    label: intro

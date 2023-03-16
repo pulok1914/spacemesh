@@ -1,0 +1,57 @@
+---
+label: 'Page: Master'
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+- type: text
+  name: layout
+  label: Layout
+  default: master
+  hidden: true
+- type: text
+  name: slug
+  label: Slug
+- type: text
+  name: type
+  label: Type
+  hidden: true
+- type: textarea
+  name: description
+  label: Details
+  config:
+    required: false
+  default: ''
+  showOnly:
+    field: quotes
+    value: true
+  description: Details copy shown under the quote.
+- name: page_sections
+  type: blocks
+  label: Page Sections
+  template_types:
+  - section-top-nav
+  - section-hero
+  - section-hero-about
+  - section-hero-start
+  - section-hero-events
+  - section-hero-careers
+  - section-hero-updates
+  - section-hero-resources
+  - section-community
+  - section-community-about
+  - section-community-start
+  - section-crypto
+  - section-hardware-start
+  - section-others-resources
+  - section-team-about
+  - section-header-blog
+  - section-post
+pages:
+- content/chaim-main-page-option-1.md
+- content/new-website-1.md
+- content/test.md
+- content/this-is-second-testing-page.md
+- content/vincent-s-main-page.md
+- content/yael-s-test.md

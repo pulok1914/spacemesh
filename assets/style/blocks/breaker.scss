@@ -1,0 +1,9 @@
+[data-block='breaker'] {
+	background-color: var(--color-gray-light);
+	color: var(--color-white);
+	padding-bottom: var(--padding);
+
+	@media (min-width: $break-tablet) {
+		min-height: 165px;
+	}
+}

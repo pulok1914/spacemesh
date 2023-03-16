@@ -1,0 +1,18 @@
+---
+label: 'Page: Basic'
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Page Title
+pages:
+- content/YoYoYo.md
+- content/assets.md
+- content/brand-tests.md
+- content/causes-terms.md
+- content/fundraiser.md
+- content/gggdd.md
+- content/soon.md
+- content/soon2.md
+- content/terms.md
+- content/winning_together.md

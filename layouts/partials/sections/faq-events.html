@@ -1,0 +1,6 @@
+<div class="events pd-btm">
+    <section class="section faq">
+        {{ partial "behind/behinds.html" .hidden.main }}
+        {{ partial "blocks/faq-events.html" (dict "ctx" . "data" .faq "id" .faq.id) }}
+    </section>
+</div>

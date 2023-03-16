@@ -1,0 +1,30 @@
+{{ $type := "connect" }}
+{{ partial "blocks/_header.html" (merge . (dict "type" $type)) }}
+<section class="block__top">
+    <p class="intro">{{ .data.intro | safeHTML }}</p>
+    <nav class="nav">
+        <a class="prev" href="#">
+            <img alt="prev" src="/images/icons/block-arrow-left.svg" width="6" height="10">
+        </a>
+        <a class="next" href="#">
+            <img alt="next" src="/images/icons/block-arrow-right.svg" width="6" height="10">
+        </a>
+    </nav>
+</section>
+
+<section class="wrapper">
+    <div class="channels">
+        {{ range .data.links }}
+        <div class="channel">
+            <a class="channel__inner" href="{{ .link }}" target="_blank" rel="noopener noreferrer" style="--color-hover: {{ .color }}">
+                <div class="channel__name">{{ .name }}</div>
+                <div class="channel__footer">
+                    <span class="adjust-baseline">{{ .channel }}</span>
+                    {{ partial "svg/arrow.svg" }}
+                </div>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ partial "blocks/_footer.html" . }}
